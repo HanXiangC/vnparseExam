@@ -1,0 +1,18 @@
+'s NO
+[+be] NO
+and NO
+apart NO (by def)
+as YES (by def)
+at YES (by def)
+away NO (no by def)
+be NO (by def)
+down YES FOR NON-TERMINAL LEX; NO FOR TERMINAL LEX (see gobble-39.3)
+it NO (by def)
+it[+be] NO (by def)
+like YES (see masquerade-29.6, indeed there's a PP.attribute)
+of NO; only times where LEX has value OF is in NP (see calibratable_cos-45.6, double check)
+out NO; the water seeped out? (See substance_emission)
+there NO (by def)
+to NO? (??? TO BE IS NOT PREP?)
+together NO
+up NO; for the uses of LEX in verbnet (like down, se gobble-39.3, and dressing_well)

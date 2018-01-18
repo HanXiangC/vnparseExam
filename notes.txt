@@ -1,0 +1,123 @@
+VERBNET FORMAT
+
+See
+https://markmcco.wordpress.com/2006/09/14/structure-of-a-verbnet-class/
+
+VNCLASS ID="hit-18.1"
+    MEMBERS
+        MEMBER name="bang" wn="bang%2:35:00"
+        ...
+        NOTE: Parent ID verb is included in members (thankfully)
+    THEMROLES
+        THEMROLE type="Agent|Theme|Location|..."
+            SELRESTRS ?logic="or"
+                ?SELRSTR
+                > ASSERT logic="or" => len(SELRESTRS.children) > 1
+    FRAMES
+        FRAME
+            DESCRIPTION primary="NP V|NP V NP|..." (what we want)
+            EXAMPLES
+            SYNTAX :=
+                | LEX value="there|it|..." (Fixed)
+                | NP value="Theme|Agent|Result..."
+                    > This has either a SYNRESTRS (syntax restriction) or
+                    -- > SELRESTRS (selectional restriction) qualification
+                    > FIXME: No SELRESTRS???
+                    > TODO: Code up these ideas, inserting syntactic
+                    > restrictions when necessary
+                    ?SYNRESTRS :=
+                        | EMPTY
+                        | SYNRESTR Value="+|-" type="...|..."
+                            > ASSERT SING
+                    -- ?SELRESTRS :=
+                    --    > ASSERT SING & XOR
+                | Exactly one VERB (reprsented as V in UVI)
+                    > ASSERT SING
+                | PREP value?="to into|to towards..."  > Split on whitespace!
+                    > If value, assert EMPTY SELRSTRS NODE
+                    > If no value, assert SELRESTRS NODE
+                    > ASSERT NO SYNRESTRS
+                    ?SELRESTRS
+                        SELRESTR Value="+|-" type="definite|path|spatial"
+                | ADJ > FIXME: What is in this one?
+            SEMANTICS
+            etc
+        ...
+    SUBCLASSES
+        VNSUBCLASS ID="hit-18.1-1"
+            Same structure as VNCLASS (recursively parse)
+
+FIXME 11/10/15L: Questions
+
+1a. What is generally meant by "Qualified by thematic role" - use
+Theme|Location|Agent
+or
++ANIMATE|+CONCRETE etc.?
+
+If some combination of the *latter*, then...
+1b.
+Thematic roles have both the roles AND qualifications, e.g.
+Theme +ANIMATE
+Location +CONCRETE
+
+Most VN frame syntax has the thematic roles unqualified in place of NPs, e.g.
+Theme V
+Theme V {{+spatial}} Location
+
+But some VN frames have roles with same qualifications, e.g. *additionally*
+have qualifications, e.g.
+(There) V {{+path}} Location [+concrete] Theme <-definite>
+(run-51.3.2-2-1)
+
+A: Use qualifiers (selrstrs/synrestrs) instead of the actual thematic roles
+(Theme, Agent, Location)...ignore redundancy in individual frames, but include
+new selrstrs/synrestrs specific to frames
+
+Alphabetize !!!
+
+Intuition - what are the consequences of changing these verbs? Don't trust
+verbnet.
+
+more vnerrors -
+shake-22.3 - in syntax, proposition together is last, but ADV-Middle is first
+. Doesn't happen for many others
+
+20151118 Q
+Q: rely-70.xml: has NP V PP.theme NP S_ING, only has three syntax nodes
+NP val agent, Prep val on, NP val theme. So maybe the theme selrestrs
+should be attached to PP.theme e.g. PP.theme+animate, but that is very
+confusing. Additionally, broader question - do we add synrestrs?
+In this case, NP val theme has a synrestr '+np_ing' which actually seems
+somewhat semantic. Need to ask Josh.
+
+20151129 Notes
+rely-70 NP V PP.theme NP S_ING - just going to get rid of the extra NP. Is this
+a glitch, or is there actually a syntactic difference?
+So...
+JK, don't "GET RID" of the extra NP. Keep it...it just won't have selectional
+    restrictions
+NP V PP.theme S_ING+(whatever)
+
+engender-27.xml NP V that S has two NPs for S, one is NP val="Theme", one is NP
+val="Predicate". I'm just going to "merge" these two into the S and call it
+S+concrete, where abstract is the selectional restriction for the Theme NP but
+not the Predicate NP (which has a that_comp *syntactic* restriction).
+
+TODO: What to do with NP-PRO-ARB?
+
+20151209 Notes
+TODO: What to do with NP-PRO-ARB?
+
+consider-29.9
+NP V NP PP.attribute only has two NPs...so...need to differentiate between
+other NP V NP PP.attribute
+I'm going to leave that PP.attribute semanticsless, because the other ones have
+more than 3 NP.
+
+confess-37.10.xml and indicate-78.xml have NP V NP to be NP
+tokens only have two NPs. So just attach semantics to the last NP (NP V
+        NP+to_be)
+NOTE: ^^^ At this point, we may need to begin including synrestrs...
+
+mix-22.1. NP NP V together - needs synrestr, as it's combined into just one NP
+i.e. NP V together. Should be NP+plural V together.
