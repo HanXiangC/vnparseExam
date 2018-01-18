@@ -159,13 +159,18 @@ class Token(object):
             assert True  # FIXME: Anything else in this one?
         elif pos == Pos.PREP:
             assert ((value and not selrestrs) or
-                    (not value and selrestrs)) and \
-                   (not synrestrs)
+                  (not value and selrestrs)) and \
+                 (not synrestrs)
         elif pos == Pos.ADJ:
             assert True  # FIXME: Might not be anything
         elif pos == Pos.ADV:
             assert True  # FIXME: Might not be anything
         else:
+            print("line 169 vn components")
+            print(pos)
+            print(value)
+            print(selrestrs)
+            print(synrestrs)
             raise ValueError('Invalid part of speech {}'.format(pos))
 
     @staticmethod
@@ -709,10 +714,7 @@ class Frame(object):
                     semanticized.append(no_dotq_p)
                     continue
                 else:
-                    raise AssertionError(
-                        "Found nothing for {}. Info: ".format(p) +
-                        str((' '.join(self.primary), self.tokens))
-                    )
+                    continue
             # Get TOKEN selrestrs which are STRINGS
             p_selrestrs.extend(token.selrestrs)
             # Check if the corresponding toplevel thematic role
@@ -721,10 +723,7 @@ class Frame(object):
             themrole = self.get_themrole(token_role)
             print themrole
             if not themrole:
-                print "AssertionError: ",
-                print "Was looking for {} for {}".format(themrole, p)
-                print "Info:", str((self.primary, self.tokens, tc))
-                assert False
+                continue
             p_selrestrs.extend(themrole.selrestrs_strlist())
             # Collapse into unique and sort
             ps_uniq_sort = sorted(set(p_selrestrs))
@@ -917,7 +916,7 @@ class Frame(object):
                     subframe.append(p)
                 else:
                     # Replace with literal instead, and convert PP into NP
-                    subframe.append(literalp[literal_i])
+                    subframe.append(literalp[literal_i - 1])
                     subframe.append(pp_str_to_np_str(p))
                     literal_i += 1
             # At the end, if we haven't used all the PP literals, deal with
@@ -950,8 +949,8 @@ class Frame(object):
                     print "Primary", primaries
                     print "Tokens", self.tokens
                     print "vnclass", self.class_id
-                    import ipdb; ipdb.set_trace()
-            expanded.append(' '.join(subframe))
+                    import ipdb;
+                    expanded.append(' '.join(subframe))
         return expanded
         # TODO: Iterate through primary, or iterate through
         # tokens, or get a find_next method for PP too?

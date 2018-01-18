@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="admire-31.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="admire-31.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="admire" wn="admire%2:37:00" grouping="admire.01"/>
         <MEMBER name="adore" wn="adore%2:37:00" grouping=""/>
@@ -11,7 +10,6 @@
         <MEMBER name="cherish" wn="cherish%2:37:00" grouping=""/>
         <MEMBER name="deify" wn="" grouping=""/>
         <MEMBER name="detest" wn="detest%2:37:00" grouping=""/>
-        <MEMBER name="disbelieve" wn="" grouping=""/>
         <MEMBER name="esteem" wn="esteem%2:31:01" grouping=""/>
         <MEMBER name="exalt" wn="exalt%2:32:00" grouping="exalt.01"/>
         <MEMBER name="fancy" wn="fancy%2:37:00" grouping=""/>
@@ -311,13 +309,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-
-
-
-
-
-
-
-
-
-

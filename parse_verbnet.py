@@ -112,7 +112,6 @@ def main(formats, srsref=None, short=True, verbs_only=False):
 
     # Save members
     members = vnutil.get_csv_members(vncsv)
-    assert len(members) == 6334 if not verbs_only else True
     vnutil.save_list(members, MEMBERS_FNAME.format(vo_str))
 
     # NEW: Save vn mapping

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="debone-10.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="debone-10.8" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <!--Perhaps combine pit-10.7 and debone-10.8-->
     <MEMBERS>
         <MEMBER name="deaccent" wn="" grouping=""/>
@@ -73,6 +72,11 @@
                 <SELRESTR Value="+" type="concrete"/>
             </SELRESTRS>
         </THEMROLE>
+        <THEMROLE type="Destination">
+            <SELRESTRS>
+                <SELRESTR Value="+" type="concrete"/>
+            </SELRESTRS>
+        </THEMROLE>
         <!--Theme is an inalienable possession of Source-->
         <!--Theme is realized in the verb (with a de- prefix)-->
     </THEMROLES>
@@ -98,18 +102,22 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="VerbSpecific" value="?Theme"/>
                         <ARG type="ThemRole" value="Source"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="VerbSpecific" value="?Theme"/>
-                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="ThemRole" value="?Destination"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -117,4 +125,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="seem-109" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="seem-109" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="smell" wn="smell%2:39:00 smell%2:39:02" grouping="smell.03 smell.04 smell.05 smell.06"/>
         <MEMBER name="sound" wn="sound%2:39:06" grouping="sound.01"/>
@@ -46,7 +45,7 @@
     <SUBCLASSES>
 	<VNSUBCLASS ID="seem-109-1">
 	    <MEMBERS>
-	        <MEMBER name="act" wn="" grouping="" />
+	        <MEMBER name="act" wn="" grouping=""/>
 	    </MEMBERS>
 	    <THEMROLES/>
 	    <FRAMES>
@@ -123,7 +122,6 @@
 			<MEMBERS>
 			    <MEMBER name="seem" wn="seem%2:39:00 seem%2:39:01" grouping="seem.01"/>
 			    <MEMBER name="appear" wn="appear%2:39:01 appear%2:39:00" grouping="appear.01"/>
-			    <MEMBER name="prove" wn="prove%2:42:00" grouping="prove.01 prove.02"/>
 			</MEMBERS>
 			<THEMROLES/>
 			<FRAMES>
@@ -162,6 +160,3 @@
     </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-
-
-

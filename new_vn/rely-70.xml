@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="rely-70" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="rely-70" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="rely" wn="rely%2:31:11" grouping="rely.01"/>
         <MEMBER name="depend" wn="depend%2:31:00" grouping="depend.02"/>
@@ -174,10 +173,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-
-
-
-
-
-
-

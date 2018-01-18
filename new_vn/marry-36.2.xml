@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="marry-36.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="marry-36.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="court" wn="court%2:41:00 court%2:41:10" grouping="court.02"/>
         <MEMBER name="cuddle" wn="cuddle%2:35:00 cuddle%2:35:01" grouping=""/>
@@ -10,6 +9,7 @@
         <MEMBER name="hug" wn="hug%2:35:01" grouping="hug.01"/>
         <MEMBER name="kiss" wn="kiss%2:35:00" grouping="kiss.01"/>
         <MEMBER name="marry" wn="marry%2:41:00" grouping="marry.01"/>
+        <MEMBER name="neck" wn="neck%2:35:00" grouping=""/>
         <MEMBER name="nuzzle" wn="nuzzle%2:35:02 nuzzle%2:35:00" grouping=""/>
         <MEMBER name="pet" wn="pet%2:35:00 pet%2:35:01" grouping=""/>
         <!-- Removed "pass" from class -->

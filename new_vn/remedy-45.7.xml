@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="remedy-45.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="remedy-45.7" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="abase" wn="" grouping=""/>
         <MEMBER name="africanize" wn="" grouping=""/>
@@ -16,11 +15,12 @@
         <MEMBER name="bloody" wn="" grouping=""/>
         <MEMBER name="botch" wn="" grouping=""/>
         <MEMBER name="bowdlerize" wn="" grouping=""/>
+        <MEMBER name="bring-out" wn="" grouping=""/>
+        <MEMBER name="bring-up" wn="" grouping=""/>		
         <MEMBER name="bungle" wn="" grouping=""/>
         <MEMBER name="capacitate" wn="" grouping="capacitate.01 capacitate.02"/>
         <MEMBER name="carbonify" wn="" grouping=""/>
         <MEMBER name="castrate" wn="" grouping="castrate.01 castrate.02 castrate.03"/>
-        <MEMBER name="categorize" wn="" grouping=""/>
         <MEMBER name="catholicize" wn="" grouping=""/>
         <MEMBER name="cauterize" wn="" grouping=""/>
         <MEMBER name="chamfer" wn="" grouping=""/>
@@ -31,7 +31,6 @@
         <MEMBER name="coif" wn="" grouping=""/>
         <MEMBER name="commercialize" wn="" grouping=""/>
         <MEMBER name="configure" wn="" grouping=""/>
-        <MEMBER name="conflate" wn="" grouping=""/>
         <MEMBER name="constipate" wn="" grouping=""/>
         <MEMBER name="constringe" wn="" grouping=""/>
         <MEMBER name="construct" wn="" grouping="construct.01 construct.02 construct.03"/>
@@ -57,7 +56,6 @@
         <MEMBER name="dispel" wn="" grouping=""/>
         <MEMBER name="dislocate" wn="" grouping=""/>
         <MEMBER name="disorganize" wn="" grouping=""/>
-        <MEMBER name="domesticate" wn="" grouping="domesticate.01"/>
         <MEMBER name="edify" wn="" grouping=""/>
         <MEMBER name="emasculate" wn="" grouping=""/>
         <MEMBER name="embitter" wn="" grouping=""/>
@@ -70,15 +68,12 @@
         <MEMBER name="exacerbate" wn="" grouping=""/>
         <MEMBER name="exhume" wn="" grouping=""/>
         <MEMBER name="expropriate" wn="" grouping=""/>	
-        <MEMBER name="extinguish" wn="extinguish%2:43:00 extinguish%2:30:05" grouping="extinguish.02"/>
         <MEMBER name="fanaticize" wn="" grouping=""/>
         <MEMBER name="federalize" wn="federalize%2:30:00 federalize%2:30:02" grouping="federalize.01"/>
         <MEMBER name="fertilize" wn="" grouping="fertilize.01 fertilize.02 fertilize.03"/>
         <MEMBER name="flouridate" wn="" grouping=""/>       
 	<MEMBER name="fortify" wn="fortify%2:30:01 fortify%2:35:00" grouping="fortify.02 fortify.04"/>
         <MEMBER name="grade" wn="grade%2:35:00" grouping="grade.02"/>
-        <MEMBER name="halve" wn="" grouping=""/>
-        <MEMBER name="homogenize" wn="" grouping=""/>
         <MEMBER name="humanize" wn="" grouping=""/>
         <MEMBER name="humidify" wn="humidify%2:30:00" grouping=""/>
         <MEMBER name="hydrogenate" wn="" grouping=""/>
@@ -91,9 +86,6 @@
         <MEMBER name="invert" wn="" grouping="invert.01 invert.02"/>
         <MEMBER name="iodize" wn="iodize%2:30:00 iodize%2:29:00" grouping=""/>
         <MEMBER name="light" wn="light%2:30:00 light%2:43:00" grouping="light.01 light.02"/>
-        <MEMBER name="lighten" wn="lighten%2:35:00" grouping="lighten.02 lighten.03"/>
-        <MEMBER name="magnetize" wn="magnetize%2:30:00" grouping=""/>
-        <MEMBER name="magnify" wn="magnify%2:30:00 magnify%2:30:01" grouping="magnify.01"/>
 	<MEMBER name="manure" wn="" grouping=""/>
         <MEMBER name="marginalize" wn="" grouping=""/>
         <MEMBER name="mechanize" wn="" grouping=""/>
@@ -125,6 +117,7 @@
 	<MEMBER name="prejudge" wn="" grouping=""/>
         <MEMBER name="prettify" wn="" grouping=""/>
         <MEMBER name="publicize" wn="" grouping="publicize.01"/>
+        <MEMBER name="raise" wn="raise%2:30:02 raise%2:41:04 raise%2:30:03" grouping="raise.07"/> 
         <MEMBER name="reanimate" wn="" grouping=""/>
         <MEMBER name="rectify" wn="" grouping=""/>
         <MEMBER name="redact" wn="" grouping=""/>
@@ -149,12 +142,12 @@
         <MEMBER name="taiwanize" wn="" grouping=""/>
         <MEMBER name="tart up" wn="" grouping=""/>
         <MEMBER name="tousle" wn="" grouping=""/>
-        <MEMBER name="transplant" wn="" grouping=""/>
         <MEMBER name="traumatize" wn="" grouping=""/>
         <MEMBER name="truncate" wn="" grouping=""/>
         <MEMBER name="trivialize" wn="trivialize%2:32:00" grouping=""/>
+        <MEMBER name="turn-up" wn="" grouping=""/>
+        <MEMBER name="turn-down" wn="" grouping=""/>
         <MEMBER name="underfeed" wn="" grouping=""/>
-        <MEMBER name="upload" wn="" grouping=""/>
         <MEMBER name="urbanize" wn="" grouping=""/>
         <MEMBER name="ventilate" wn="" grouping=""/>
         <MEMBER name="vulgarize" wn="vulgarize%2:32:00 vulgarize%2:30:01" grouping="vulgarize.01 vulgarize.02"/>
@@ -177,7 +170,7 @@
             <DESCRIPTION descriptionNumber="0.2" primary="NP V NP.patient" secondary="Basic Transitive; Causative" xtag="0.2"/>
             <!-- couldn't find transitive frame for carbonify, degenerate, glutenize, subside-->
             <EXAMPLES>
-                <EXAMPLE>Bill dried the clothes.</EXAMPLE>
+                <EXAMPLE>Bill repaired the tractor.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -189,17 +182,28 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="state">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Endstate"/>
-                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -207,7 +211,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="0.2" primary="NP V NP PP.instrument" secondary="NP-PP; Instrument-PP" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Bill dried the clothes with a hairdryer.</EXAMPLE>
+                <EXAMPLE>Bill repaired the tractor with duct tape.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -225,20 +229,31 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="state">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Endstate"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="use">
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -247,33 +262,60 @@
                 </PRED>
             </SEMANTICS>
         </FRAME>
-	<FRAME>
-            <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADV-Middle" secondary="Middle Construction" xtag=""/>
-            <!-- Verb specifies property Prop of Patient-->
-            <EXAMPLES>
-                <EXAMPLE>Cotton clothes dry easily.</EXAMPLE>
-            </EXAMPLES>
-            <SYNTAX>
-                <NP value="Patient">
-                    <SYNRESTRS/>
-                </NP>
-                <VERB/>
-                <ADV/>
-            </SYNTAX>
-            <SEMANTICS>
-                <PRED value="property">
-                    <ARGS>
-                        <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="Adv">
-                    <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
-                    </ARGS>
-                </PRED>
-            </SEMANTICS>
-        </FRAME>
     </FRAMES>
-    <SUBCLASSES/>
+    <SUBCLASSES>
+	<VNSUBCLASS ID="remedy-45.7-1">
+	    <MEMBERS>
+		<MEMBER name="categorize" wn="" grouping=""/>
+		<MEMBER name="conflate" wn="" grouping=""/>
+		<MEMBER name="domesticate" wn="" grouping="domesticate.01"/>
+	        <MEMBER name="extinguish" wn="extinguish%2:43:00 extinguish%2:30:05" grouping="extinguish.02"/>
+		<MEMBER name="halve" wn="" grouping=""/>
+		<MEMBER name="homogenize" wn="" grouping=""/>
+	        <MEMBER name="lighten" wn="lighten%2:35:00" grouping="lighten.02 lighten.03"/>
+	        <MEMBER name="magnetize" wn="magnetize%2:30:00" grouping=""/>
+	        <MEMBER name="magnify" wn="magnify%2:30:00 magnify%2:30:01" grouping="magnify.01"/>
+		<MEMBER name="transplant" wn="" grouping=""/>
+		<MEMBER name="upload" wn="" grouping=""/>
+	    </MEMBERS>
+            <THEMROLES/>
+	    <FRAMES>
+		<FRAME>
+		    <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADV-Middle" secondary="Middle Construction" xtag=""/>
+		    <!-- Verb specifies property Prop of Patient-->
+		    <EXAMPLES>
+		        <EXAMPLE>The new tractors repaired easily.</EXAMPLE>
+		    </EXAMPLES>
+		    <SYNTAX>
+		        <NP value="Patient">
+		            <SYNRESTRS/>
+		        </NP>
+		        <VERB/>
+		        <ADV/>
+		    </SYNTAX>
+		    <SEMANTICS>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="?Initial_State"/>
+                                <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="?Result"/>
+                                <ARG type="ThemRole" value="Patient"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+		    </SEMANTICS>
+		</FRAME>
+    	    </FRAMES>
+	    <SUBCLASSES/>
+	</VNSUBCLASS>	
+    </SUBCLASSES>
 </VNCLASS>

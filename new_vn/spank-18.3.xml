@@ -1,46 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="spank-18.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="spank-18.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
-        <MEMBER name="bayonet" wn="bayonet%2:35:00" grouping=""/>
         <MEMBER name="belt" wn="belt%2:35:00" grouping="belt.02"/>
         <MEMBER name="biff" wn="biff%2:35:00" grouping=""/>
         <MEMBER name="birch" wn="birch%2:35:00" grouping=""/>
         <MEMBER name="bludgeon" wn="bludgeon%2:35:00" grouping=""/>
         <MEMBER name="bonk" wn="bonk%2:35:00" grouping=""/>
         <MEMBER name="brain" wn="brain%2:35:01" grouping=""/>
-        <MEMBER name="bump" wn="bump%2:35:00" grouping="bump.01"/>
         <MEMBER name="cane" wn="cane%2:35:00" grouping=""/>
         <MEMBER name="clobber" wn="clobber%2:35:01" grouping="clobber.01"/>
         <MEMBER name="clout" wn="clout%2:35:00" grouping=""/>
         <MEMBER name="club" wn="club%2:35:00" grouping="club.02"/>
         <MEMBER name="conk" wn="conk%2:35:00" grouping=""/>
         <MEMBER name="cosh" wn="cosh%2:35:00" grouping=""/>
-        <MEMBER name="crack" wn="crack%2:35:00" grouping="crack.05"/>
-        <MEMBER name="crunch" wn="crunch%2:30:00" grouping="crunch.03"/>
         <MEMBER name="cudgel" wn="cudgel%2:35:00" grouping=""/>
         <MEMBER name="cuff" wn="cuff%2:35:00" grouping=""/>
         <MEMBER name="elbow" wn="elbow%2:35:00" grouping=""/>
         <MEMBER name="flagellate" wn="flagellate%2:35:00" grouping=""/>
+        <MEMBER name="flail" wn="" grouping=""/>
         <MEMBER name="flog" wn="flog%2:35:00 flog%2:35:01" grouping=""/>
-        <MEMBER name="gash" wn="gash%2:35:00" grouping=""/>
+        <MEMBER name="fustigate" wn="" grouping=""/>
         <MEMBER name="knee" wn="" grouping=""/>
         <MEMBER name="knife" wn="knife%2:35:00" grouping=""/>
         <MEMBER name="k.o." wn="" grouping=""/>
+        <MEMBER name="lam" wn="" grouping=""/>
+        <MEMBER name="larrup" wn="" grouping=""/>
+        <MEMBER name="lather" wn="" grouping=""/>  
         <MEMBER name="paddle" wn="paddle%2:35:07" grouping="paddle.03"/>
-        <MEMBER name="paddywhack" wn="" grouping=""/>
+        <MEMBER name="pommel" wn="" grouping=""/>
         <MEMBER name="pummel" wn="pummel%2:35:00" grouping=""/>
         <MEMBER name="slam" wn="slam%2:35:01 slam%2:35:00 slam%2:35:02" grouping="slam.01"/>
         <MEMBER name="sock" wn="sock%2:35:00" grouping=""/>
         <MEMBER name="spank" wn="spank%2:35:00" grouping=""/>
-        <MEMBER name="stabb" wn="" grouping=""/>
         <MEMBER name="strap" wn="strap%2:35:01" grouping="strap.03"/>
         <MEMBER name="thrash" wn="thrash%2:35:00 thrash%2:35:01" grouping="thrash.02"/>
         <MEMBER name="thump" wn="thump%2:39:00 thump%2:35:00" grouping=""/>
         <MEMBER name="truncheon" wn="" grouping=""/>
         <MEMBER name="wallop" wn="wallop%2:35:00" grouping=""/>
+        <MEMBER name="wham" wn="" grouping=""/>
+        <MEMBER name="whap" wn="" grouping=""/> 
         <MEMBER name="whip" wn="whip%2:35:00 whip%2:35:02" grouping="whip.01"/>
         <MEMBER name="whisk" wn="whisk%2:35:01" grouping=""/>
+        <MEMBER name="whomp" wn="" grouping=""/>
+        <MEMBER name="whop" wn="" grouping=""/> 
         <MEMBER name="horsewhip" wn="horsewhip%2:35:00" grouping=""/>
     </MEMBERS>
     <THEMROLES>
@@ -175,7 +177,7 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -236,10 +238,22 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -301,10 +315,22 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -372,13 +398,25 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -406,9 +444,9 @@
                     </SELRESTRS>
                 </PREP>
                 <NP value="Location">
-                    <SYNRESTRS>
-                        <SYNRESTR Value="+" type="body_part"/>
-                    </SYNRESTRS>
+                    <SELRESTRS>
+                        <SELRESTR Value="+" type="body_part"/>
+                    </SELRESTRS>
                 </NP>
             </SYNTAX>
             <SEMANTICS>
@@ -467,9 +505,9 @@
                     </SELRESTRS>
                 </PREP>
                 <NP value="Location">
-                    <SYNRESTRS>
-                        <SYNRESTR Value="+" type="body_part"/>
-                    </SYNRESTRS>
+                    <SELRESTRS>
+                        <SELRESTR Value="+" type="body_part"/>
+                    </SELRESTRS>
                 </NP>
                 <PREP value="with">
                     <SELRESTRS/>
@@ -526,10 +564,9 @@
                 </NP>
                 <VERB/>
                 <NP value="Patient">
-                    <SYNRESTRS>
-                        <SYNRESTR Value="+" type="genitive"/>
-                        <SYNRESTR Value="+" type="body_part"/>
-                    </SYNRESTRS>
+		    <SELRESTRS>
+                        <SELRESTR Value="+" type="body_part"/>
+                    </SELRESTRS>
                 </NP>
             </SYNTAX>
             <SEMANTICS>

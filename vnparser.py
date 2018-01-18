@@ -60,12 +60,15 @@ def members_and_frames(vnclass, frames=None, roles=()):
     # subclasses if they exist
     members = []
     class_id = vnclass['ID']
+    print("Line 63, member search, firing")
+    print(class_id)
     for mem in vnclass.find('MEMBERS', recursive=False).find_all('MEMBER'):
         members.append(
             Verb(mem['name'], class_id, mem['wn'].split(),
                  mem['grouping'] if 'grouping' in mem else None)
         )
-
+    print("line 70 members list")
+    print(members)
     if frames is None:  # Avoid mutable default argument
         frames = []
     else:
@@ -153,7 +156,9 @@ def filter_empty(children):
     """
     Helper function to get rid of weird empty line BeautifulSoup children.
     """
+
     return filter(lambda n: n.name is not None, children)
+
 
 
 def parse_token(node):
@@ -178,6 +183,7 @@ def parse_token(node):
         selrestrs = node.find('SELRESTRS')
         if selrestrs and selrestrs.text:
             for sr in filter_empty(selrestrs.children):
+                
                 selrestr_tp += (sr['Value'] + sr['type'], )
 
         logical_or = logical_and = False
@@ -199,9 +205,14 @@ def parse_token(node):
         # Construct selectional restrictions
         selrestr_tp = ()
         selrestrs = node.find('SELRESTRS')
+        print("Lin 213 forLoop")
+        print(selrestrs)
+        print("*******")
         for sr in filter_empty(selrestrs.children):
+            print("Ln 215 VNParser: SR causing error")
+            print(sr)
+            print("*")
             selrestr_tp += (sr['Value'] + sr['type'], )
-
         # Get value if exists
         value = None
         if node.has_attr('value'):
@@ -209,7 +220,17 @@ def parse_token(node):
             value = node['value']
             assert not selrestr_tp
         else:
-            assert selrestr_tp
+             print("Ln 226 VNParser: Selrestr causing error")
+             print(node.name)
+             print(node)
+             print("*")
+             print("*")
+             print("*")
+             print(selrestrs)
+             print("*")
+             print(selrestr_tp)
+             print("*")
+             assert selrestr_tp
         # Assert no synrestrs
         assert not node.find('SYNRESTRS')
         # Construct class from the selrestrs_tp
@@ -225,8 +246,10 @@ def parse_token(node):
                 raise Exception("Found prep logic that's not or or and")
 
         selrestrs_class = TokenSelrestr(selrestr_tp, logical_or, logical_and)
-
+        print("Line241 VNparser Selrestrs")
+        print(selrestrs_class)
         return Token(Pos.PREP, value, selrestrs=selrestrs_class)
+
     elif node.name == 'ADJ':
         return Token(Pos.ADJ)  # Doesn't seem like there's anything in here
     elif node.name == 'ADV':

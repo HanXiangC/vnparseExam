@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="concealment-16" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="concealment-16" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="block" wn="block%2:39:00" grouping="block.01"/>
         <MEMBER name="cloister" wn="cloister%2:42:00 cloister%2:30:00" grouping="cloister.01 cloister.02"/>
@@ -74,10 +73,9 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="benefit">
                     <ARGS>
                         <ARG type="Event" value="E"/>
-                        <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Beneficiary"/>
                     </ARGS>
                 </PRED>
@@ -232,10 +230,9 @@
                                 <ARG type="ThemRole" value="Agent"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="Prep">
+                        <PRED value="benefit">
                             <ARGS>
                                 <ARG type="Event" value="E"/>
-                                <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Beneficiary"/>
                             </ARGS>
                         </PRED>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="shake-22.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="shake-22.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS/>
     <THEMROLES>
         <!--Patient1 is interpreted as Figure, Patient2 as Ground-->
@@ -26,7 +25,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADV-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Eggs whisk easily.</EXAMPLE>
+                <EXAMPLE>The eggs whisked easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -38,15 +37,10 @@
                 <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="property">
+                <PRED value="degradation_material_integrity">
                     <ARGS>
-                        <ARG type="ThemRole" value="Patient+Co-Patient"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="Adv">
-                    <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -54,7 +48,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V together ADV-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Sugar and cream whip together easily.</EXAMPLE>
+                <EXAMPLE>The sugar and cream whipped together easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -67,15 +61,23 @@
                 <LEX value="together"/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="property">
+                <PRED value="degradation_material_integrity">
                     <ARGS>
-                        <ARG type="ThemRole" value="Patient+Co-Patient"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Adv">
+                <PRED value="degradation_material_integrity">
                     <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Co-Patient"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="mingled">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -132,7 +134,6 @@
                         <PRED value="mingled">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -178,7 +179,6 @@
                         <PRED value="mingled">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -203,7 +203,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V PP ADV-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Sugar whips into cream easily.</EXAMPLE>
+                <EXAMPLE>The sugar whipped into cream easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -219,16 +219,23 @@
                  <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="property">
+                <PRED value="degradation_material_integrity">
                     <ARGS>
-                        <ARG type="ThemRole"
-                        value="Patient+Co-Patient"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Adv">
+                <PRED value="degradation_material_integrity">
                     <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Co-Patient"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="mingled">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -319,7 +326,6 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -353,7 +359,6 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -410,7 +415,6 @@
                                 <PRED value="together">
                                     <ARGS>
                                         <ARG type="Event" value="end(E)"/>
-                                        <ARG type="Constant" value="physical"/>
                                         <ARG type="ThemRole" value="Patient"/>
                                         <ARG type="ThemRole" value="?Co-Patient"/>
                                     </ARGS>
@@ -424,4 +428,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-

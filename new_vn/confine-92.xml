@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="confine-92" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="confine-92" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="charge" wn="charge%2:40:05" grouping="charge.06"/>
         <MEMBER name="institutionalize" wn="institutionalize%2:40:00" grouping=""/>
@@ -10,7 +9,6 @@
         <MEMBER name="jail" wn="jail%2:41:00" grouping="jail.01"/>
         <MEMBER name="imprison" wn="imprison%2:41:00 imprison%2:41:01" grouping="imprison.01"/>
         <MEMBER name="jug" wn="jug%2:41:00" grouping=""/>
-        <MEMBER name="hold" wn="hold%2:35:03" grouping="hold.02"/>
         <MEMBER name="immure" wn="immure%2:41:00" grouping=""/>
     </MEMBERS>
     <THEMROLES>
@@ -45,18 +43,22 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED bool="!" value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="?Destination"/>
+                        <ARG type="ThemRole" value="?Initial_Location"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="?Destination"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="confined">
@@ -85,7 +87,7 @@
             <THEMROLES/>
             <FRAMES>
                 <FRAME>
-                    <DESCRIPTION descriptionNumber="8.1" primary="NP V PP.destination" secondary="NP-PP; to-PP" xtag="0.1"/>
+                    <DESCRIPTION descriptionNumber="8.1" primary="NP V NP PP.destination" secondary="NP-PP; to-PP" xtag="0.1"/>
                     <EXAMPLES>
                         <EXAMPLE>We committed John to prison.</EXAMPLE>
                     </EXAMPLES>
@@ -105,18 +107,22 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED bool="!" value="location">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="Destination"/>
+                                <ARG type="ThemRole" value="?Initial_Location"/>
+                                <ARG type="Constant" value="ch_of_loc"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="location">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
                                 <ARG type="ThemRole" value="Destination"/>
+                                <ARG type="Constant" value="ch_of_loc"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
                         <PRED value="confined">
@@ -138,6 +144,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-
-
-

@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="see-30.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="see-30.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
-        <MEMBER name="smell" wn="smell%2:39:01" grouping="smell.01"/>
-        <MEMBER name="taste" wn="taste%2:34:00 taste%2:39:00 taste%2:39:01" grouping="taste.01 taste.02"/>
+       <MEMBER name="tell" wn="tell%2:31:00 tell%2:31:01" grouping="tell.02"/>
     </MEMBERS>
     <THEMROLES>
         <THEMROLE type="Experiencer">
@@ -17,9 +15,9 @@
     </THEMROLES>
     <FRAMES>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP" secondary="Basic Transitive" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.5" primary="NP V that S" secondary="S" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>I saw the play.</EXAMPLE>
+                <EXAMPLE>I can tell that you're excited.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Experiencer">
@@ -27,7 +25,9 @@
                 </NP>
                 <VERB/>
                 <NP value="Stimulus">
-                    <SYNRESTRS/>
+                    <SYNRESTRS>
+                        <SYNRESTR Value="+" type="that_comp"/>
+                    </SYNRESTRS>
                 </NP>
             </SYNTAX>
             <SEMANTICS>
@@ -46,10 +46,19 @@
                 </PRED>
             </SEMANTICS>
         </FRAME>
+    </FRAMES>
+    <SUBCLASSES>
+       <VNSUBCLASS ID="see-30.1-1">
+    <MEMBERS>
+        <MEMBER name="smell" wn="smell%2:39:01" grouping="smell.01"/>
+        <MEMBER name="taste" wn="taste%2:34:00 taste%2:39:00 taste%2:39:01" grouping="taste.01 taste.02"/>
+    </MEMBERS>
+    <THEMROLES/>
+    <FRAMES>
         <FRAME>
-            <DESCRIPTION descriptionNumber="0.5" primary="NP V that S" secondary="S" xtag=""/>
+            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP" secondary="Basic Transitive" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>I can see that you are feeling great.</EXAMPLE>
+                <EXAMPLE>I saw the play.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Experiencer">
@@ -57,9 +66,7 @@
                 </NP>
                 <VERB/>
                 <NP value="Stimulus">
-                    <SYNRESTRS>
-                        <SYNRESTR Value="+" type="that_comp"/>
-                    </SYNRESTRS>
+                    <SYNRESTRS/>
                 </NP>
             </SYNTAX>
             <SEMANTICS>
@@ -175,7 +182,7 @@
         </FRAME>
     </FRAMES>
     <SUBCLASSES>
-        <VNSUBCLASS ID="see-30.1-1">
+        <VNSUBCLASS ID="see-30.1-1-1">
             <MEMBERS>
                 <MEMBER name="detect" wn="detect%2:39:00" grouping="detect.01"/>
                 <MEMBER name="discern" wn="discern%2:39:00" grouping=""/>
@@ -263,7 +270,7 @@
                         <VERB/>
                         <NP value="Stimulus">
                             <SYNRESTRS>
-                                <SYNRESTR Value="+" type="pos_ing"/>
+                                <SYNRESTR Value="+" type="poss_ing"/>
                             </SYNRESTRS>
                         </NP>
                     </SYNTAX>
@@ -285,7 +292,7 @@
                 </FRAME>
             </FRAMES>
             <SUBCLASSES>
-                <VNSUBCLASS ID="see-30.1-1-1">
+                <VNSUBCLASS ID="see-30.1-1-1-1">
                     <MEMBERS>
                         <MEMBER name="hear" wn="hear%2:39:00 hear%2:31:00 hear%2:39:01 hear%2:39:05" grouping="hear.01 hear.02"/>
                     </MEMBERS>
@@ -330,9 +337,6 @@
             </SUBCLASSES>
         </VNSUBCLASS>
     </SUBCLASSES>
+    </VNSUBCLASS>
+    </SUBCLASSES> 
 </VNCLASS>
-
-
-
-
-

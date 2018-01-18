@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="appear-48.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="appear-48.1.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="appear" wn="appear%2:30:00 appear%2:30:01" grouping="appear.02"/>
         <MEMBER name="arise" wn="arise%2:42:00 arise%2:42:01" grouping="arise.01"/>
@@ -41,7 +40,9 @@
         <MEMBER name="stream" wn="stream%2:38:03" grouping="stream.01"/>
         <MEMBER name="supervene" wn="supervene%2:30:00" grouping=""/>
         <MEMBER name="surge" wn="surge%2:38:01" grouping="surge.01"/>
-        <MEMBER name="take shape" wn="" grouping=""/>
+        <MEMBER name="take_shape" wn="" grouping=""/>
+        <MEMBER name="turn_up" wn="" grouping=""/>
+        <MEMBER name="turn_out" wn="" grouping=""/>
         <MEMBER name="wax" wn="?wax%2:30:00 ?wax%2:30:01" grouping="wax.02"/>
     </MEMBERS>
     <THEMROLES>
@@ -99,14 +100,14 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="Prep">
+                <PRED bool="!" value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
@@ -142,14 +143,14 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="Prep">
+                <PRED bool="!" value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
@@ -185,14 +186,14 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="Prep">
+                <PRED bool="!" value="location">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>

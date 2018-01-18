@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="dub-29.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="dub-29.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="call" wn="call%2:32:02 call%2:32:00 call%2:41:14" grouping="call.01 call.04 call.05"/>
         <MEMBER name="decree" wn="decree%2:31:00" grouping=""/>
         <MEMBER name="dub" wn="dub%2:32:00" grouping="dub.01"/>
-        <MEMBER name="make" wn="make%2:30:00 make%2:41:03" grouping="make.03"/>
         <MEMBER name="pronounce" wn="pronounce%2:32:01 pronounce%2:32:00" grouping="pronounce.02"/>
         <MEMBER name="rename" wn="rename%2:32:00" grouping="rename.01"/>
         <MEMBER name="rule" wn="rule%2:31:00" grouping="rule.02"/>

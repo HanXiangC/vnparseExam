@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="addict-96" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="addict-96" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="addict" wn="addict%2:34:00" grouping=""/>
         <MEMBER name="bias" wn="bias%2:33:00" grouping=""/>
@@ -58,10 +57,16 @@
                 <PRED value="desire">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
                         <ARG type="ThemRole" value="Stimulus"/>
                     </ARGS>
                 </PRED>
+                <PRED value="equals">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                    </ARGS> 
+                </PRED> 
             </SEMANTICS>
         </FRAME>
         <FRAME>
@@ -96,8 +101,14 @@
                 <PRED value="desire">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
                         <ARG type="ThemRole" value="Stimulus"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="equals">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -105,6 +116,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-
-
-

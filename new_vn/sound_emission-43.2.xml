@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="sound_emission-43.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="sound_emission-43.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="babble" wn="babble%2:39:00" grouping="babble.02"/>
         <MEMBER name="bang" wn="bang%2:39:00 bang%2:38:00" grouping="bang.01"/>
@@ -197,7 +196,7 @@
                         <ARG type="VerbSpecific" value="Sound"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="VerbSpecific" value="Sound"/>
@@ -268,7 +267,7 @@
                         <ARG type="VerbSpecific" value="Sound"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="VerbSpecific" value="Sound"/>
@@ -306,7 +305,7 @@
                         <ARG type="VerbSpecific" value="Sound"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="VerbSpecific" value="Sound"/>
@@ -346,39 +345,30 @@
                 </PRED>
             </SEMANTICS>
         </FRAME>
-    </FRAMES>
-    <SUBCLASSES>
-        <VNSUBCLASS ID="sound_emission-43.2-1">
-            <MEMBERS/>
-            <THEMROLES/>
-            <FRAMES>
-                <FRAME>
-                    <DESCRIPTION descriptionNumber="0.2" primary="NP V NP:"
-            secondary="Transitive" xtag=""/>
-                    <EXAMPLES>
-                        <EXAMPLE>The bell chimed the hour.</EXAMPLE>
-                    </EXAMPLES>
-                    <SYNTAX>
-                        <NP value="Theme">
-                            <SYNRESTRS/>
-                        </NP>
-                        <VERB/>
-                        <NP value="Time">
-                            <SELRESTRS/>
-                        </NP>
-                    </SYNTAX>
-                    <SEMANTICS>
-                        <PRED value="emit">
-                            <ARGS>
-                                 <ARG type="Event" value="during(E)"/>
-                                 <ARG type="ThemRole" value="Theme"/>
-                                 <ARG type="VerbSpecific" value="Sound"/>
-                            </ARGS>
-                        </PRED>
-                    </SEMANTICS>
-                </FRAME> 
-            </FRAMES>
-            <SUBCLASSES/>
-        </VNSUBCLASS>
-    </SUBCLASSES>
+        <FRAME>
+            <DESCRIPTION descriptionNumber="0.2" primary="NP V NP" secondary="Transitive" xtag=""/>
+            <EXAMPLES>
+                <EXAMPLE>The bell chimed the hour.</EXAMPLE>
+            </EXAMPLES>
+            <SYNTAX>
+                <NP value="Theme">
+                    <SYNRESTRS/>
+                </NP>
+                <VERB/>
+                <NP value="Result">
+                    <SELRESTRS/>
+                </NP>
+            </SYNTAX>
+            <SEMANTICS>
+                <PRED value="emit">
+                    <ARGS>
+                         <ARG type="Event" value="during(E)"/>
+                         <ARG type="ThemRole" value="Theme"/>
+                         <ARG type="VerbSpecific" value="Sound"/>
+                    </ARGS>
+                </PRED>
+            </SEMANTICS>
+        </FRAME>
+       </FRAMES>
+    <SUBCLASSES/>
 </VNCLASS>

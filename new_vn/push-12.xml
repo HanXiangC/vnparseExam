@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="push-12" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="push-12" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="heave" wn="heave%2:35:01" grouping="heave.01"/>
     </MEMBERS>
@@ -111,10 +110,22 @@
                                 <ARG type="ThemRole" value="Theme"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="Pred">
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="?Initial_State"/>
+                                <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="Result"/>
                                 <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="Constant" value="ch_of_state"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -174,6 +185,78 @@
                     <THEMROLES/>
                     <FRAMES>
                         <FRAME>
+                            <DESCRIPTION descriptionNumber="0.1" primary="NP V PP" secondary="PP; directional" xtag=""/>
+                            <EXAMPLES>
+                                <EXAMPLE>She squeezed the toothpaste out.</EXAMPLE>
+                            </EXAMPLES>
+                            <SYNTAX>
+                                <NP value="Agent">
+                                    <SYNRESTRS/>
+                                </NP>
+                                <VERB/>
+                                <PREP>
+                                    <SELRESTRS>
+                                        <SELRESTR Value="+" type="dir"/>
+                                    </SELRESTRS>
+                                </PREP> 
+                            </SYNTAX>
+                            <SEMANTICS>
+                                <PRED value="cause">
+                                    <ARGS>
+                                        <ARG type="ThemRole" value="Agent"/>
+                                        <ARG type="Event" value="E"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="contact">
+                                    <ARGS>
+                                        <ARG type="Event" value="during(E)"/>
+                                        <ARG type="ThemRole" value="Agent"/>
+                                        <ARG type="ThemRole" value="Theme"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="exert_force">
+                                    <ARGS>
+                                        <ARG type="Event" value="during(E)"/>
+                                        <ARG type="ThemRole" value="Agent"/>
+                                        <ARG type="ThemRole" value="Theme"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="path_rel">
+                                    <ARGS>
+                                        <ARG type="Event" value="start(E)"/>
+                                        <ARG type="ThemRole" value="?Source"/>
+                                        <ARG type="ThemRole" value="Theme"/>
+                                        <ARG type="Constant" value="ch_of_loc"/>
+                                       <ARG type="VerbSpecific" value="prep"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="path_rel">
+                                    <ARGS>
+                                        <ARG type="Event" value="start(E)"/>
+                                        <ARG type="ThemRole" value="?Trajectory"/>
+                                        <ARG type="ThemRole" value="Theme"/>
+                                        <ARG type="Constant" value="ch_of_loc"/>
+                                       <ARG type="VerbSpecific" value="prep"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="path_rel">
+                                    <ARGS>
+                                        <ARG type="Event" value="result(E)"/>
+                                        <ARG type="ThemRole" value="?Goal"/>
+                                        <ARG type="ThemRole" value="Theme"/>
+                                        <ARG type="Constant" value="ch_of_loc"/>
+                                        <ARG type="VerbSpecific" value="prep"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="motion">
+                                    <ARGS>
+                                        <ARG type="Event" value="during(E)"/>
+                                        <ARG type="ThemRole" value="Theme"/>
+                                    </ARGS>
+                                </PRED>
+                            </SEMANTICS>
+                        </FRAME>
+                        <FRAME>
                             <DESCRIPTION descriptionNumber="1.2.7" primary="NP V PP.trajectory" secondary="PP" xtag="through-PP"/>
                             <EXAMPLES>
                                 <EXAMPLE>Nora pushed through the crowd.</EXAMPLE>
@@ -213,6 +296,33 @@
                                         <ARG type="ThemRole" value="?Theme"/>
                                     </ARGS>
                                 </PRED>
+                                <PRED value="path_rel">
+                                    <ARGS>
+                                        <ARG type="Event" value="start(E)"/>
+                                        <ARG type="ThemRole" value="?Source"/>
+                                        <ARG type="ThemRole" value="Agent"/>
+                                        <ARG type="Constant" value="ch_of_loc"/>
+                                       <ARG type="VerbSpecific" value="prep"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="path_rel">
+                                    <ARGS>
+                                        <ARG type="Event" value="start(E)"/>
+                                        <ARG type="ThemRole" value="Trajectory"/>
+                                        <ARG type="ThemRole" value="Agent"/>
+                                        <ARG type="Constant" value="ch_of_loc"/>
+                                       <ARG type="VerbSpecific" value="prep"/>
+                                    </ARGS>
+                                </PRED>
+                                <PRED value="path_rel">
+                                    <ARGS>
+                                        <ARG type="Event" value="result(E)"/>
+                                        <ARG type="ThemRole" value="?Goal"/>
+                                        <ARG type="ThemRole" value="Agent"/>
+                                        <ARG type="Constant" value="ch_of_loc"/>
+                                        <ARG type="VerbSpecific" value="prep"/>
+                                    </ARGS>
+                                </PRED>
                                 <PRED value="motion">
                                     <ARGS>
                                         <ARG type="Event" value="during(E)"/>
@@ -228,4 +338,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-

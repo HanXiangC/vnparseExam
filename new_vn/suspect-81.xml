@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="suspect-81" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="suspect-81" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="suspect" wn="suspect%2:32:02" grouping="suspect.02"/>
         <MEMBER name="accuse" wn="accuse%2:32:00" grouping="accuse.01"/>
@@ -117,6 +116,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-
-
-

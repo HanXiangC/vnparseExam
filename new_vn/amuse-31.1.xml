@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="amuse-31.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="amuse-31.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="abash" wn="abash%2:37:00" grouping=""/>
         <MEMBER name="affect" wn="affect%2:37:00" grouping="affect.02"/>
@@ -71,7 +70,7 @@
         <MEMBER name="disgruntle" wn="disgruntle%2:37:00" grouping=""/>
         <MEMBER name="disgust" wn="disgust%2:39:00 disgust%2:37:00" grouping="disgust.01"/>
         <MEMBER name="dishearten" wn="dishearten%2:37:00" grouping=""/>
-        <MEMBER name="dishonour" wn="dishonour%1:26:00" grouping="dishonour.01"/>
+        <MEMBER name="dishonour" wn="dishonour%2:41:00" grouping="dishonour.01"/>
         <MEMBER name="disillusion" wn="disillusion%2:37:00" grouping=""/>
         <MEMBER name="dismay" wn="dismay%2:37:01 dismay%2:37:00" grouping=""/>
         <MEMBER name="dispirit" wn="dispirit%2:37:00" grouping=""/>
@@ -150,6 +149,7 @@
         <MEMBER name="jar" wn="jar%2:37:00" grouping=""/>
         <MEMBER name="jollify" wn="" grouping=""/>
         <MEMBER name="jolt" wn="jolt%2:37:00" grouping="jolt.02"/>
+        <MEMBER name="kill" wn="kill%2:37:00" grouping="kill.05"/>
         <MEMBER name="lull" wn="lull%2:37:01" grouping=""/>
         <MEMBER name="madden" wn="madden%2:37:01 madden%2:37:00" grouping=""/>
         <MEMBER name="menace" wn="" grouping="menace.02"/>
@@ -202,7 +202,6 @@
         <MEMBER name="rile" wn="rile%2:37:00" grouping=""/>
         <MEMBER name="ruffle" wn="ruffle%2:37:00 ruffle%2:37:01" grouping="ruffle.02"/>
         <MEMBER name="sadden" wn="sadden%2:37:01" grouping=""/>
-        <MEMBER name="satiate" wn="" grouping=""/>
         <MEMBER name="satisfy" wn="satisfy%2:37:00" grouping="satisfy.01"/>
         <MEMBER name="scandalize" wn="scandalize%2:37:00" grouping=""/>
         <MEMBER name="scare" wn="scare%2:37:00 scare%2:37:04" grouping="scare.01"/>
@@ -226,8 +225,6 @@
         <MEMBER name="stupefy" wn="stupefy%2:39:00 stupefy%2:31:00" grouping=""/>
         <MEMBER name="surprise" wn="surprise%2:31:00" grouping="surprise.01"/>
         <MEMBER name="tantalize" wn="tantalize%2:32:00" grouping=""/>
-        <MEMBER name="taunt" wn="" grouping=""/>
-        <MEMBER name="tease" wn="tease%2:37:00 tease%2:32:00" grouping="tease.01"/>
         <MEMBER name="tempt" wn="tempt%2:37:00 tempt%2:37:01" grouping="tempt.01 tempt.03"/>
         <MEMBER name="terrify" wn="terrify%2:37:00" grouping=""/>
         <MEMBER name="terrorize" wn="terrorize%2:37:00" grouping="terrorize.01"/>
@@ -303,7 +300,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADV-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Little children amuse easily.</EXAMPLE>
+                <EXAMPLE>The little children amused easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Experiencer">
@@ -313,15 +310,11 @@
                 <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="property">
+                <PRED value="emotional_state">
                     <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="VerbSpecific" value="?Emotion"/>
                         <ARG type="ThemRole" value="Experiencer"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="Adv">
-                    <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -378,9 +371,10 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
+
                 <PRED value="emotional_state">
                     <ARGS>
-                        <ARG type="Event" value="during(E)"/>
+                        <ARG type="Event" value="result(E)"/>
                         <ARG type="VerbSpecific" value="Emotion"/>
                         <ARG type="ThemRole" value="Experiencer"/>
                     </ARGS>
@@ -405,6 +399,24 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Stimulus"/>
@@ -415,12 +427,6 @@
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
                         <ARG type="VerbSpecific" value="Emotion"/>
-                        <ARG type="ThemRole" value="Experiencer"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="Pred">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
                         <ARG type="ThemRole" value="Experiencer"/>
                     </ARGS>
                 </PRED>

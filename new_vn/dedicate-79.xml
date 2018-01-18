@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="dedicate-79" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="dedicate-79" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="dedicate" wn="dedicate%2:32:00" grouping="dedicate.01"/>
         <MEMBER name="devote" wn="devote%2:32:00" grouping="devote.01"/>
@@ -90,6 +89,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-
-
-

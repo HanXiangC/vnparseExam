@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="withdraw-82" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="withdraw-82" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS/>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -38,7 +37,7 @@
                         <VERB/>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="renege">
+                        <PRED value="withdraw">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -65,7 +64,7 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="renege">
+                        <PRED value="withdraw">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -94,7 +93,7 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="renege">
+                        <PRED value="withdraw">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -110,6 +109,7 @@
             <MEMBERS>
                 <MEMBER name="get_away" wn="get_away%2:32:00" grouping=""/>
                 <MEMBER name="back_off" wn="back_off%2:41:00" grouping=""/>
+                <MEMBER name="back_down" wn="" grouping=""/>
             </MEMBERS>
             <THEMROLES/>
             <FRAMES>
@@ -126,7 +126,7 @@
                         <LEX value="away"/>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="renege">
+                        <PRED value="withdraw">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -153,7 +153,7 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="renege">
+                        <PRED value="withdraw">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -182,7 +182,7 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="renege">
+                        <PRED value="withdraw">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -215,7 +215,7 @@
                         <VERB/>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="renege">
+                        <PRED value="withdraw">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -242,7 +242,7 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="renege">
+                        <PRED value="withdraw">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -256,9 +256,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-
-
-
-
-
-

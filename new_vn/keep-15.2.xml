@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="keep-15.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="keep-15.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="hoard" wn="hoard%2:40:01" grouping=""/>
+        <MEMBER name="hold" wn="hold%2:42:00 hold%2:40:02" grouping="hold.03"/>
         <MEMBER name="keep" wn="keep%2:40:13 keep%2:40:12 keep%2:40:10" grouping="keep.03"/>
         <MEMBER name="leave" wn="leave%2:40:06 leave%2:31:02" grouping="leave.02"/>
         <MEMBER name="store" wn="store%2:40:00 store%2:40:02" grouping="store.01"/>
@@ -50,7 +50,7 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
@@ -68,7 +68,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="" primary="NP V NP" secondary="Basic Transitive" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Many small investors in Belgium store securities.</EXAMPLE>
+                <EXAMPLE>Many small investors kept Belgium store securities.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">

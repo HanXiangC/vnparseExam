@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="other_cos-45.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="other_cos-45.4" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="abate" wn="abate%2:30:01 abate%2:30:00" grouping="abate.01"/>
         <MEMBER name="abbreviate" wn="" grouping=""/>
@@ -131,7 +130,6 @@
 	<MEMBER name="expand" wn="expand%2:38:00 expand%2:30:07 expand%2:30:12" grouping="expand.01 expand.02"/>
         <MEMBER name="explode" wn="explode%2:30:01 explode%2:30:00 explode%2:35:00" grouping="explode.01"/>
         <MEMBER name="fade" wn="fade%2:30:02 fade%2:30:01" grouping="fade.01 fade.02"/>
-        <MEMBER name="famish" wn="" grouping=""/>
         <MEMBER name="fatten" wn="fatten%2:34:00" grouping=""/>
         <MEMBER name="federate" wn="federate%2:30:00" grouping=""/>
         <MEMBER name="feminize" wn="" grouping=""/>
@@ -237,8 +235,7 @@
         <MEMBER name="quieten" wn="quieten%2:39:00 quieten%2:37:00 quieten%2:30:00" grouping=""/>
         <MEMBER name="rarefy" wn="" grouping=""/>
         <MEMBER name="redden" wn="redden%2:29:00 redden%2:30:01 redden%2:30:00" grouping=""/>
-        <MEMBER name="redouble" wn="redouble%2:30:00 redouble%2:30:01
-        redouble%2:30:02" grouping=""/>
+        <MEMBER name="redouble" wn="redouble%2:30:00 redouble%2:30:01         redouble%2:30:02" grouping=""/>
 	<MEMBER name="refine" wn="" grouping=""/>
 	<MEMBER name="reform" wn="" grouping=""/>
         <MEMBER name="rekindle" wn="rekindle%2:43:00" grouping="rekindle.01"/>
@@ -313,9 +310,10 @@
         <MEMBER name="toughen" wn="toughen%2:30:00" grouping=""/>
         <MEMBER name="tranquilize" wn="" grouping=""/>
         <MEMBER name="treble" wn="" grouping=""/>
-	<MEMBER name="trigger" wn="" grouping=""/>
         <MEMBER name="trip" wn="trip%2:36:00" grouping="trip.03"/>
         <MEMBER name="triple" wn="triple%2:30:00" grouping="triple.01"/>
+        <MEMBER name="turn-on" wn="" grouping=""/>
+        <MEMBER name="turn-off" wn="" grouping=""/>
         <MEMBER name="ulcerate" wn="ulcerate%2:30:00 ulcerate%2:29:00" grouping=""/>
         <MEMBER name="unionize" wn="unionize%2:41:00" grouping=""/>
 	<MEMBER name="upload" wn="" grouping=""/>
@@ -370,17 +368,28 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="state">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Endstate"/>
-                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -406,20 +415,31 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
-                <PRED value="state">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Endstate"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="use">
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -440,11 +460,22 @@
                 <VERB/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="state">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Endstate"/>
+                        <ARG type="ThemRole" value="?Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -453,7 +484,7 @@
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADV-Middle" secondary="Middle Construction" xtag=""/>
             <!-- Verb specifies property Prop of Patient-->
             <EXAMPLES>
-                <EXAMPLE>Cotton clothes dry easily.</EXAMPLE>
+                <EXAMPLE>The cotton clothes dried easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -463,15 +494,22 @@
                 <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="property">
+                <PRED value="path_rel">
                     <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Adv">
+                <PRED value="path_rel">
                     <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -491,18 +529,29 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="use">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="?Agent"/>
                         <ARG type="ThemRole" value="Instrument"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="state">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Endstate"/>
-                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -516,6 +565,7 @@
         	<MEMBER name="dry" wn="dry%2:30:01 dry%2:30:00" grouping="dry.01"/>
         	<MEMBER name="freeze" wn="freeze%2:30:00 freeze%2:30:02 freeze%2:30:04" grouping="freeze.02"/>
         	<MEMBER name="melt" wn="melt%2:30:01 melt%2:30:00" grouping="melt.01"/>
+                <MEMBER name="set" wn="" grouping="set.03"/> 
         	<MEMBER name="thaw" wn="thaw%2:30:00" grouping=""/>
 	    </MEMBERS>
 	    <THEMROLES/>
@@ -535,19 +585,24 @@
 		    </NP>
 		</SYNTAX>
 		<SEMANTICS>
-		    <PRED value="state">
-			<ARGS>
-			    <ARG type="Event" value="result(E)"/>
-			    <ARG type="VerbSpecific" value="Endstate"/>
-			    <ARG type="ThemRole" value="Patient"/>
-			</ARGS>
-		    </PRED>
-		    <PRED value="Pred">
-			<ARGS>
-			    <ARG type="Event" value="result(E)"/>
-			    <ARG type="ThemRole" value="Patient"/>
-			</ARGS>
-		    </PRED>
+                    <PRED value="path_rel">
+                        <ARGS>
+                            <ARG type="Event" value="start(E)"/>
+                            <ARG type="ThemRole" value="?Initial_State"/>
+                            <ARG type="ThemRole" value="Patient"/>
+                            <ARG type="Constant" value="ch_of_state"/>
+                            <ARG type="VerbSpecific" value="prep"/>
+                        </ARGS>
+                    </PRED>
+                    <PRED value="path_rel">
+                        <ARGS>
+                            <ARG type="Event" value="result(E)"/>
+                            <ARG type="ThemRole" value="Result"/>
+                            <ARG type="ThemRole" value="Patient"/>
+                            <ARG type="Constant" value="ch_of_state"/>
+                            <ARG type="VerbSpecific" value="prep"/>
+                        </ARGS>
+                    </PRED>
 		</SEMANTICS>
 		</FRAME>  
 	    </FRAMES>
@@ -555,4 +610,3 @@
     </VNSUBCLASS>
 </SUBCLASSES>
 </VNCLASS>
-

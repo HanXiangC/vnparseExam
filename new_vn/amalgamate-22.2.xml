@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="amalgamate-22.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="amalgamate-22.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="intermarry" wn="intermarry%2:41:00" grouping=""/>
     </MEMBERS>
@@ -24,7 +23,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADVP-Middle PP" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Folk songs alternate well with pop songs.</EXAMPLE>
+                <EXAMPLE>The folk songs alternated well with pop songs.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -40,15 +39,23 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="property">
+                <PRED value="degradation_material_integrity">
                     <ARGS>
-                        <ARG type="ThemRole" value="Patient+Co-Patient"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Adv">
+                <PRED value="degradation_material_integrity">
                     <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Co-Patient"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="mingled">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -56,7 +63,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADVP-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>The pieces interconnect easily.</EXAMPLE>
+                <EXAMPLE>The pieces interconnected easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -68,15 +75,11 @@
                 <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="property">
+                <PRED value="together">
                     <ARGS>
-                        <ARG type="ThemRole" value="Patient_i+Patient_j"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="Adv">
-                    <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="end(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -147,7 +150,6 @@
                         <PRED value="mingled">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -192,7 +194,6 @@
                         <PRED value="mingled">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient_i"/>
                                 <ARG type="ThemRole" value="Patient_j"/>
                             </ARGS>
@@ -232,7 +233,6 @@
                         <PRED value="mingled">
                             <ARGS>
                                 <ARG type="Event" value="result(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -280,7 +280,6 @@
                                 <PRED value="mingled">
                                     <ARGS>
                                         <ARG type="Event" value="result(E)"/>
-                                        <ARG type="Constant" value="physical"/>
                                         <ARG type="ThemRole" value="Patient_i"/>
                                         <ARG type="ThemRole" value="Patient_j"/>
                                     </ARGS>
@@ -360,7 +359,6 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -393,7 +391,6 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient_i"/>
                                 <ARG type="ThemRole" value="Patient_j"/>
                             </ARGS>
@@ -421,7 +418,6 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="Constant" value="physical"/>
                                 <ARG type="ThemRole" value="Patient"/>
                                 <ARG type="ThemRole" value="Co-Patient"/>
                             </ARGS>
@@ -478,7 +474,6 @@
                                 <PRED value="together">
                                     <ARGS>
                                         <ARG type="Event" value="end(E)"/>
-                                        <ARG type="Constant" value="physical"/>
                                         <ARG type="ThemRole" value="Patient_i"/>
                                         <ARG type="ThemRole" value="Patient_j"/>
                                     </ARGS>
@@ -522,7 +517,6 @@
                         <PRED value="together">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="Constant" value="abstract/physical"/>
                                 <ARG type="ThemRole" value="Patient_i"/>
                                 <ARG type="ThemRole" value="Patient_j"/>
                             </ARGS>
@@ -549,7 +543,7 @@
                                 </NP>
                                 <VERB/>
                                 <NP value="Patient">
-                                    <SYNRESTRS/>
+                                   <SYNRESTRS/>
                                 </NP>
                                 <PREP value="to">
                                     <SELRESTRS/>
@@ -568,7 +562,6 @@
                                 <PRED value="together">
                                     <ARGS>
                                         <ARG type="Event" value="end(E)"/>
-                                        <ARG type="Constant" value="abstract/physical"/>
                                         <ARG type="ThemRole" value="Patient"/>
                                         <ARG type="ThemRole" value="Co-Patient"/>
                                     </ARGS>
@@ -618,7 +611,6 @@
                                         <PRED value="together">
                                             <ARGS>
                                                 <ARG type="Event" value="end(E)"/>
-                                                <ARG type="Constant" value="abstract/physical"/>
                                                 <ARG type="ThemRole" value="Patient_i"/>
                                                 <ARG type="ThemRole" value="Patient_j"/>
                                             </ARGS>
@@ -632,8 +624,7 @@
                 </VNSUBCLASS>
                 <VNSUBCLASS ID="amalgamate-22.2-3-2">
                     <MEMBERS>
-                        <MEMBER name="engage" wn="engage%2:32:00"
-                        grouping="engage.03"/>
+                        <MEMBER name="engage" wn="engage%2:32:00" grouping="engage.03"/>
                     </MEMBERS>
                     <THEMROLES>
                         <THEMROLE type="Agent">
@@ -668,7 +659,6 @@
                                 <PRED value="together">
                                     <ARGS>
                                         <ARG type="Event" value="end(E)"/>
-                                        <ARG type="Constant" value="physical"/>
                                         <ARG type="ThemRole" value="Patient_i"/>
                                         <ARG type="ThemRole" value="Patient_j"/>
                                     </ARGS>

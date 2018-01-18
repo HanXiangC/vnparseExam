@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="limit-76" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="limit-76" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="confine" wn="confine%2:30:00" grouping="confine.01"/>
         <MEMBER name="limit" wn="limit%2:30:01" grouping="limit.01"/>
@@ -10,7 +9,7 @@
         <MEMBER name="constrain" wn="" grouping="constrain.01"/>
     </MEMBERS>
     <THEMROLES>
-        <THEMROLE type="Cause">
+        <THEMROLE type="Causer">
             <SELRESTRS/>
         </THEMROLE>
         <THEMROLE type="Patient">
@@ -30,7 +29,7 @@
                 <EXAMPLE>The lack of money limited the help.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Cause">
+                <NP value="Causer">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -42,7 +41,7 @@
                 <PRED value="limit">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Cause"/>
+                        <ARG type="ThemRole" value="Causer"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="?Goal"/>
                     </ARGS>
@@ -55,7 +54,7 @@
                 <EXAMPLE>The lack of money limited them to helping to our peers.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Cause">
+                <NP value="Causer">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -75,7 +74,7 @@
                 <PRED value="limit">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Cause"/>
+                        <ARG type="ThemRole" value="Causer"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Goal"/>
                     </ARGS>
@@ -88,7 +87,7 @@
                 <EXAMPLE>The lack of money limited the help to our peers.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Cause">
+                <NP value="Causer">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -106,7 +105,7 @@
                 <PRED value="limit">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Cause"/>
+                        <ARG type="ThemRole" value="Causer"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Goal"/>
                     </ARGS>
@@ -119,7 +118,7 @@
                 <EXAMPLE>The lack of money limited them to help their peers only.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
-                <NP value="Cause">
+                <NP value="Causer">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
@@ -136,7 +135,7 @@
                 <PRED value="limit">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Cause"/>
+                        <ARG type="ThemRole" value="Causer"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Goal"/>
                     </ARGS>
@@ -146,6 +145,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-
-
-

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="assuming_position-50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="assuming_position-50" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--individual verbs specify what spatial position Pos refers to, and specifies what kind of motion is happening during the event for Agent to assume this position-->
         <!--"straddle" also takes a transitive ("John straddled the horse")-->
@@ -118,7 +117,7 @@
                         <ARG type="VerbSpecific" value="Pos"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="E"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -130,4 +129,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-

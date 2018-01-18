@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="enforce-63" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="enforce-63" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="control" wn="control%2:41:00" grouping="control.01"/>
         <MEMBER name="enforce" wn="enforce%2:41:01" grouping="enforce.01"/>
@@ -71,7 +70,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-
-
-
-

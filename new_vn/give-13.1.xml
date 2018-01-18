@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="give-13.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="give-13.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
-        <MEMBER name="deal" wn="deal%2:40:01 deal%2:40:02 deal%2:40:07 deal%2:40:06" grouping="deal.04"/>
+        <MEMBER name="deal" wn="deal%2:40:01 deal%2:40:02 deal%2:40:07         deal%2:40:06" grouping="deal.04"/>
+        <MEMBER name="give-back" wn="" grouping="give.01 give.02"/>
         <MEMBER name="lend" wn="lend%2:40:00" grouping="lend.02"/>
         <MEMBER name="loan" wn="loan%2:40:00" grouping=""/>
         <MEMBER name="pass" wn="pass%2:40:00 pass%2:40:01 pass%2:40:13 pass%2:38:04" grouping="pass.04"/>
@@ -52,18 +52,22 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="has_possession">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="has_possession">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Recipient"/>
                         <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="Recipient"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="transfer">
@@ -77,6 +81,12 @@
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
                     </ARGS>
+                </PRED>
+                <PRED value="equals">
+                   <ARGS>
+                       <ARG type="ThemRole" value="Agent"/>
+                       <ARG type="ThemRole" value="Source"/>
+                   </ARGS> 
                 </PRED>
             </SEMANTICS>
         </FRAME>
@@ -98,18 +108,22 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="has_possession">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="has_possession">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Recipient"/>
                         <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="Recipient"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="transfer">
@@ -122,6 +136,12 @@
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="equals">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Agent"/>
+                        <ARG type="ThemRole" value="Source"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -141,18 +161,22 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="has_possession">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="has_possession">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="?Recipient"/>
                         <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="?Recipient"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="transfer">
@@ -165,6 +189,12 @@
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
                         <ARG type="Event" value="E"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="equals">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Agent"/>
+                        <ARG type="ThemRole" value="Source"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -187,18 +217,22 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="has_possession">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="?Theme"/>
+                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="has_possession">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
-                        <ARG type="ThemRole" value="Recipient"/>
                         <ARG type="ThemRole" value="?Theme"/>
+                        <ARG type="ThemRole" value="Recipient"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="transfer">
@@ -213,6 +247,12 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
+                <PRED value="equals">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Agent"/>
+                        <ARG type="ThemRole" value="Source"/>
+                    </ARGS>
+                </PRED>
             </SEMANTICS>
         </FRAME>
     </FRAMES>
@@ -222,6 +262,7 @@
                 <MEMBER name="give" wn="give%2:40:03 give%2:40:00 give%2:40:01 give%2:40:02 give%2:40:06 give%2:40:13 give%2:34:00 give%2:40:12" grouping="give.01 give.08"/>
                 <MEMBER name="hock" wn="hock%2:40:00" grouping=""/>
                 <MEMBER name="hawk" wn="hawk%2:40:00" grouping="hawk.01"/>
+                <MEMBER name="let" wn="let%2:40:00" grouping="let.02"/>
                 <MEMBER name="rent" wn="rent%2:41:01 rent%2:40:01" grouping="rent.01"/>
                 <MEMBER name="sell" wn="sell%2:40:00 sell%2:40:01" grouping="sell.01 sell.02"/>
                 <MEMBER name="lease" wn="lease%2:41:00 lease%2:40:01" grouping="lease.02"/>
@@ -254,32 +295,40 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Source"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="ThemRole" value="?Recipient"/>
                                 <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="?Recipient"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="?Recipient"/>
                                 <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="ThemRole" value="?Recipient"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="ThemRole" value="Source"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
                         <PRED value="transfer">
@@ -287,6 +336,18 @@
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
                             </ARGS>
+                        </PRED>
+                        <PRED value="transfer">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Asset"/>
+                            </ARGS> 
+                        </PRED>
+                        <PRED value="equals">
+                            <ARGS>
+                                <ARG type="ThemRole" value="Agent"/>
+                                <ARG type="ThemRole" value="Source"/>
+                            </ARGS>  
                         </PRED>
                     </SEMANTICS>
                 </FRAME>
@@ -317,32 +378,40 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Source"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>   
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="ThemRole" value="Recipient"/>
                                 <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Recipient"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/> 
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="Recipient"/>
                                 <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="ThemRole" value="Recipient"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="ThemRole" value="Source"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
                         <PRED value="transfer">
@@ -350,6 +419,18 @@
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
                             </ARGS>
+                        </PRED>
+                        <PRED value="transfer">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Asset"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="equals">
+                            <ARGS>
+                                <ARG type="ThemRole" value="Agent"/>
+                                <ARG type="ThemRole" value="Source"/>
+                            </ARGS> 
                         </PRED>
                     </SEMANTICS>
                 </FRAME>
@@ -377,38 +458,58 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Source"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="ThemRole" value="Recipient"/>
                                 <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="Recipient"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
-                                <ARG type="ThemRole" value="Recipient"/>
                                 <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="ThemRole" value="Recipient"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="has_possession">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
-                                <ARG type="ThemRole" value="Agent"/>
                                 <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="ThemRole" value="Source"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
                         <PRED value="transfer">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="transfer">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Asset"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="equals">
+                            <ARGS>
+                                <ARG type="ThemRole" value="Agent"/>
+                                <ARG type="ThemRole" value="Source"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>
@@ -419,15 +520,3 @@
         <!-- end -1 -->
     </SUBCLASSES>
 </VNCLASS>
-
-
-
-
-
-
-
-
-
-
-
-

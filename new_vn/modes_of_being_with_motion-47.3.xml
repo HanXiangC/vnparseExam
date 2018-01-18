@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="modes_of_being_with_motion-47.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="modes_of_being_with_motion-47.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--Each member adds a manner predicate for how the Theme is moving-->
         <MEMBER name="bob" wn="bob%2:38:00" grouping="bob.01"/>
@@ -21,8 +20,7 @@
         <MEMBER name="pulsate" wn="pulsate%2:38:00" grouping=""/>
         <MEMBER name="pulse" wn="pulse%2:38:00" grouping="pulse.01"/>
         <MEMBER name="quake" wn="quake%2:38:01 quake%2:38:02" grouping=""/>
-        <MEMBER name="quiver" wn="quiver%2:38:00 quiver%2:38:04"
-        grouping=""/>
+        <MEMBER name="quiver" wn="quiver%2:38:00 quiver%2:38:04" grouping=""/>
         <MEMBER name="recirculate" wn="" grouping=""/>
         <MEMBER name="revolve" wn="revolve%2:38:00 revolve%2:38:01 revolve%2:38:02" grouping="revolve.01"/>
         <MEMBER name="rock" wn="rock%2:38:00" grouping="rock.01"/>
@@ -119,7 +117,7 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
@@ -190,7 +188,7 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>

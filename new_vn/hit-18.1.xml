@@ -1,16 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="hit-18.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="hit-18.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="bang" wn="bang%2:35:00 bang%2:35:01" grouping="bang.01 bang.04"/>
         <MEMBER name="bash" wn="bash%2:35:00" grouping=""/>
+        <MEMBER name="blast" wn="" grouping=""/>
+        <MEMBER name="bop" wn="" grouping=""/>
         <MEMBER name="click" wn="click%2:35:00" grouping="click.02"/>
         <MEMBER name="dash" wn="dash%2:35:02" grouping="dash.02"/>
+        <MEMBER name="knap" wn="" grouping=""/>
+        <MEMBER name="pink" wn="" grouping="pink.03"/>
         <MEMBER name="squash" wn="squash%2:35:00" grouping=""/>
+        <MEMBER name="squelch" wn="" grouping="squelch.01"/>
         <MEMBER name="tamp" wn="tamp%2:35:00" grouping=""/>
         <MEMBER name="thump" wn="thump%2:35:00" grouping=""/>
         <MEMBER name="thwack" wn="thwack%2:35:00" grouping=""/>
+        <MEMBER name="trounce" wn="" grouping=""/>
         <MEMBER name="whack" wn="whack%2:35:00" grouping="whack.01"/>
+        <MEMBER name="wham" wn="" grouping=""/>
+        <MEMBER name="whang" wn="" grouping=""/>
+        <MEMBER name="whap" wn="" grouping=""/>
+        <MEMBER name="whop" wn="" grouping=""/>
         <MEMBER name="smite" wn="smite%2:35:00 smite%2:30:00" grouping="smite.01"/>
     </MEMBERS>
     <THEMROLES>
@@ -140,7 +149,7 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -269,10 +278,22 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -335,13 +356,25 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -407,10 +440,22 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -478,13 +523,25 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
                     <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -548,7 +605,7 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -648,10 +705,22 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -707,10 +776,22 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Pred">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
                         <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -829,7 +910,7 @@
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="use">
+                <PRED value="utilize">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -838,114 +919,6 @@
                 </PRED>
             </SEMANTICS>
         </FRAME>
-                <FRAME>
-                    <DESCRIPTION descriptionNumber="0.2" primary="NP V NP" secondary="Transitive; Body-part or reflexive Object" xtag="0.2"/>
-                    <EXAMPLES>
-                        <EXAMPLE>Paul hit his elbow.</EXAMPLE>
-                    </EXAMPLES>
-                    <SYNTAX>
-                        <NP value="Agent">
-                            <SYNRESTRS/>
-                        </NP>
-                        <VERB/>
-                        <NP value="Instrument">
-                            <SYNRESTRS/>
-                        </NP>
-                    </SYNTAX>
-                    <SEMANTICS>
-                        <PRED value="cause">
-                            <ARGS>
-                                <ARG type="ThemRole" value="Agent"/>
-                                <ARG type="Event" value="E"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="manner">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="Constant" value="directedmotion"/>
-                                <ARG type="ThemRole" value="Instrument"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED bool="!" value="contact">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Instrument"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="manner">
-                            <ARGS>
-                                <ARG type="Event" value="end(E)"/>
-                                <ARG type="Constant" value="forceful"/>
-                                <ARG type="ThemRole" value="Instrument"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="contact">
-                            <ARGS>
-                                <ARG type="Event" value="end(E)"/>
-                                <ARG type="ThemRole" value="Instrument"/>
-                                <ARG type="ThemRole" value="?Patient"/>
-                            </ARGS>
-                        </PRED>
-                    </SEMANTICS>
-                </FRAME>
-                <FRAME>
-                    <DESCRIPTION descriptionNumber="0.2" primary="NP V NP PP" secondary="Transitive; Body-part or reflexive Object" xtag="0.2"/>
-                    <EXAMPLES>
-                        <EXAMPLE>Paul hit his elbow on the doorknob.</EXAMPLE>
-                    </EXAMPLES>
-                    <SYNTAX>
-                        <NP value="Agent">
-                            <SYNRESTRS/>
-                        </NP>
-                        <VERB/>
-                        <NP value="Instrument">
-                            <SYNRESTRS/>
-                        </NP>
-                        <PREP value="against on">
-                            <SELRESTRS/>
-                        </PREP>
-                        <NP value="Patient">
-                            <SYNRESTRS/>
-                        </NP>
-                    </SYNTAX>
-                    <SEMANTICS>
-                        <PRED value="cause">
-                            <ARGS>
-                                <ARG type="ThemRole" value="Agent"/>
-                                <ARG type="Event" value="E"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="manner">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="Constant" value="directedmotion"/>
-                                <ARG type="ThemRole" value="Instrument"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED bool="!" value="contact">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Instrument"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="manner">
-                            <ARGS>
-                                <ARG type="Event" value="end(E)"/>
-                                <ARG type="Constant" value="forceful"/>
-                                <ARG type="ThemRole" value="Instrument"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="contact">
-                            <ARGS>
-                                <ARG type="Event" value="end(E)"/>
-                                <ARG type="ThemRole" value="Instrument"/>
-                                <ARG type="ThemRole" value="Patient"/>
-                            </ARGS>
-                        </PRED>
-                    </SEMANTICS>
-                </FRAME>
             </FRAMES>
             <SUBCLASSES/>
         </VNSUBCLASS>

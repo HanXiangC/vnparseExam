@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="discover-84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="discover-84" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="deduce" wn="deduce%2:31:00 deduce%2:32:00" grouping="deduce.01"/>
         <MEMBER name="determine" wn="determine%2:32:00 determine%2:32:01" grouping="determine.01"/>
@@ -11,10 +10,13 @@
         <MEMBER name="ascertain" wn="ascertain%2:31:01" grouping="ascertain.01"/>
         <MEMBER name="rationalize" wn="rationalize%2:32:00" grouping="rationalize.01"/>
         <MEMBER name="relearn" wn="relearn%2:31:00" grouping=""/>
+        <MEMBER name="see" wn="see%2:31:02" grouping="see.02"/>
         <MEMBER name="scent_out" wn="scent_out%2:39:00" grouping=""/>
         <MEMBER name="solve" wn="solve%2:31:00 solve%2:31:01" grouping="solve.01 solve.02"/>
         <MEMBER name="chance_across" wn="" grouping=""/>
         <MEMBER name="chance_on" wn="chance_on%2:40:00" grouping=""/>
+        <MEMBER name="chance_upon" wn="" grouping=""/>
+        <MEMBER name="work_out" wn="work_out%2:31:04" grouping="work.08"/>
     </MEMBERS>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -501,7 +503,6 @@
                     <MEMBERS>
                         <MEMBER name="hear" wn="hear%2:31:00" grouping="hear.01"/>
                         <MEMBER name="learn" wn="learn%2:31:01" grouping="learn.02"/>
-                        <MEMBER name="read" wn="read%2:31:00" grouping="read.01"/>
                         <MEMBER name="study" wn="study%2:31:02" grouping="study.01"/>
                         <MEMBER name="find_out" wn="find_out%2:31:00 find_out%2:32:01" grouping=""/>
                         <MEMBER name="figure_out" wn="figure_out%2:31:00" grouping=""/>
@@ -509,7 +510,7 @@
                     <THEMROLES/>
                     <FRAMES>
                         <FRAME>
-                            <DESCRIPTION descriptionNumber="0.1" primary="NP v" secondary="Basic Intransitive" xtag="0.2"/>
+                            <DESCRIPTION descriptionNumber="0.1" primary="NP V" secondary="Basic Intransitive" xtag="0.2"/>
                             <EXAMPLES>
                                 <EXAMPLE>I learned.</EXAMPLE>
                             </EXAMPLES>
@@ -663,8 +664,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-
-
-
-
-

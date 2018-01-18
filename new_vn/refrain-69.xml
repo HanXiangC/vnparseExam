@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="refrain-69" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="refrain-69" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="refrain" wn="refrain%2:42:00 refrain%2:34:00" grouping="refrain.01"/>
         <MEMBER name="abstain" wn="abstain%2:41:00 abstain%2:34:00" grouping=""/>
@@ -31,7 +30,7 @@
                 <VERB/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="abstain">
+                <PRED bool="!" value="do">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -60,7 +59,7 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="abstain">
+                <PRED bool="!" value="do">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -89,7 +88,7 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="abstain">
+                <PRED bool="!" value="do">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Agent"/>
@@ -101,6 +100,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-
-
-

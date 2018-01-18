@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="leave-51.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="leave-51.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="abandon" wn="abandon%2:40:00 abandon%2:38:00" grouping="abandon.01"/>
         <MEMBER name="split" wn="" grouping=""/>
@@ -11,10 +10,13 @@
                 <SELRESTR Value="+" type="animate"/>
             </SELRESTRS>
         </THEMROLE>
-        <THEMROLE type="Initial_Location">
+        <THEMROLE type="Source">
             <SELRESTRS>
-                <SELRESTR Value="+" type="location"/>
-                <SELRESTR Value="-" type="region"/>
+                <SELRESTR Value="+" type="animate"/>
+            </SELRESTRS>
+        </THEMROLE>
+        <THEMROLE type="Goal">
+            <SELRESTRS>
             </SELRESTRS>
         </THEMROLE>
     </THEMROLES>
@@ -22,14 +24,14 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="0.2" primary="NP V NP.initial_location" secondary="Transitive; basically, locative preposition drop of &quot;from&quot;" xtag="0.2"/>
             <EXAMPLES>
-                <EXAMPLE>We abandoned the area.</EXAMPLE>
+                <EXAMPLE>She left her husband.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Theme">
                     <SYNRESTRS/>
                 </NP>
                 <VERB/>
-                <NP value="Initial_Location">
+                <NP value="Source">
                     <SYNRESTRS/>
                 </NP>
             </SYNTAX>
@@ -40,26 +42,31 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="location">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Initial_Location"/>
+                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="location">
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="during(E)"/>
+                        <ARG type="ThemRole" value="Theme"/>
+                        <ARG type="ThemRole" value="?Trajectory"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Initial_Location"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="direction">
-                    <ARGS>
-                        <ARG type="Event" value="during(E)"/>
-                        <ARG type="Constant" value="from"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Initial_Location"/>
+                        <ARG type="ThemRole" value="?Goal"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -91,26 +98,31 @@
                                 <ARG type="ThemRole" value="Theme"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="location">
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="start(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="?Initial_Location"/>
+                                <ARG type="ThemRole" value="?Source"/>
+                                <ARG type="Constant" value="ch_of_loc"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
-                        <PRED bool="!" value="location">
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="during(E)"/>
+                                <ARG type="ThemRole" value="Theme"/>
+                                <ARG type="ThemRole" value="?Trajectory"/>
+                                <ARG type="Constant" value="ch_of_loc"/>
+                                <ARG type="VerbSpecific" value="prep"/> 
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
                             <ARGS>
                                 <ARG type="Event" value="end(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="?Initial_Location"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="direction">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="Constant" value="from"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="?Initial_Location"/>
+                                <ARG type="ThemRole" value="?Goal"/>
+                                <ARG type="Constant" value="ch_of_loc"/>
+                                <ARG type="VerbSpecific" value="prep"/>
                             </ARGS>
                         </PRED>
                     </SEMANTICS>

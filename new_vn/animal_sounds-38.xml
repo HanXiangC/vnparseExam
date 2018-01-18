@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="animal_sounds-38" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="animal_sounds-38" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="baa" wn="baa%2:32:00" grouping=""/>
         <MEMBER name="bark" wn="bark%2:32:00" grouping="bark.01"/>
@@ -44,6 +43,7 @@
         <MEMBER name="purr" wn="purr%2:32:00" grouping="purr.01"/>
         <MEMBER name="quack" wn="quack%2:32:00" grouping=""/>
         <MEMBER name="roar" wn="roar%2:32:05" grouping="roar.01"/>
+        <MEMBER name="rooroo" wn="" grouping=""/>
         <MEMBER name="scrawk" wn="" grouping=""/>
         <MEMBER name="squawk" wn="squawk%2:32:01" grouping=""/>
         <MEMBER name="squeak" wn="squeak%2:39:00" grouping=""/>
@@ -141,9 +141,10 @@
                         <ARG type="VerbSpecific" value="Sound"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="direction">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
+                        <ARG type="Constant" value="toward"/>
                         <ARG type="VerbSpecific" value="Sound"/>
                         <ARG type="ThemRole" value="Recipient"/>
                     </ARGS>
@@ -233,12 +234,12 @@
                 <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="VerbSpecific" value="Sound"/>
+                        <ARG type="ThemRole" value="Agent"/>
                         <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
-        </FRAME>
+            </FRAME>
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>

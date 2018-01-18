@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="consume-66" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="consume-66" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="use" wn="use%2:34:00" grouping="use.02"/>
         <MEMBER name="consume" wn="consume%2:34:01" grouping="consume.02"/>
-        <MEMBER name="pass" wn="pass%2:42:00" grouping="pass.03"/>
     </MEMBERS>
     <THEMROLES>
         <THEMROLE type="Agent">
@@ -24,7 +22,7 @@
         <FRAME> 
             <DESCRIPTION descriptionNumber="8.1" primary="NP V NP" secondary="Basic Transitive" xtag="0.2"/>
             <EXAMPLES>
-                <EXAMPLE>I spent all that time.</EXAMPLE>
+                <EXAMPLE>I spent all that money.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -56,12 +54,40 @@
                         <ARG type="ThemRole" value="?Goal"/>
                     </ARGS>
                 </PRED>
+                <PRED value="do">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Agent"/>
+                        <ARG type="Event" value="E"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="ThemRole" value="Asset"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Goal"/>
+                        <ARG type="ThemRole" value="Asset"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="equals">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Agent"/>
+                        <ARG type="ThemRole" value="Source"/>
+                    </ARGS>
+                </PRED>
             </SEMANTICS>
         </FRAME>
         <FRAME>
             <DESCRIPTION descriptionNumber="8.1" primary="NP V NP S_ING" secondary="NP-ING-SC" xtag="0.2"/>
             <EXAMPLES>
-                <EXAMPLE>I spent the time worrying about the future.</EXAMPLE>
+                <EXAMPLE>I spent that money feeding my family.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -98,6 +124,34 @@
                         <ARG type="ThemRole" value="Goal"/>
                     </ARGS>
                 </PRED>
+                <PRED value="do">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Agent"/>
+                        <ARG type="Event" value="E"/>
+                    </ARGS> 
+                </PRED> 
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="Source"/>
+                        <ARG type="ThemRole" value="Asset"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Goal"/>
+                        <ARG type="ThemRole" value="Asset"/>
+                        <ARG type="Constant" value="ch_of_poss"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="equals">
+                    <ARGS>
+                        <ARG type="ThemRole" value="Agent"/>
+                        <ARG type="ThemRole" value="Source"/>
+                    </ARGS>
+                </PRED>
             </SEMANTICS>
         </FRAME>
     </FRAMES>
@@ -105,7 +159,8 @@
         <VNSUBCLASS ID="consume-66-1">
             <MEMBERS>
                 <MEMBER name="reuse" wn="reuse%2:34:00" grouping=""/>
-                <MEMBER name="spend" wn="spend%2:42:00" grouping="spend.01"/>
+                <MEMBER name="misspend" wn="misspend%2:40:00" grouping=""/>
+                <MEMBER name="spend" wn="spend%2:40:00 spend%2:40:01" grouping="spend.02"/>
                 <MEMBER name="squander" wn="squander%2:34:00" grouping=""/>
                 <MEMBER name="waste" wn="waste%2:40:00 waste%2:34:05" grouping="waste.01"/>
             </MEMBERS>
@@ -114,7 +169,7 @@
                 <FRAME>
                     <DESCRIPTION descriptionNumber="8.1" primary="NP V NP S_ING" secondary="NP-P-ING-SC; on-PP" xtag="0.2"/>
                     <EXAMPLES>
-                        <EXAMPLE>I spent the time on worrying about the future.</EXAMPLE>
+                        <EXAMPLE>I spent the resources on buying books.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
                         <NP value="Agent">
@@ -154,12 +209,40 @@
                                 <ARG type="ThemRole" value="Goal"/>
                             </ARGS>
                         </PRED>
+                        <PRED value="do">
+                            <ARGS>
+                                <ARG type="ThemRole" value="Agent"/>
+                                <ARG type="Event" value="E"/> 
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="Source"/>
+                                <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="Goal"/>
+                                <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="equals">
+                            <ARGS>
+                                <ARG type="ThemRole" value="Agent"/>
+                                <ARG type="ThemRole" value="Source"/>
+                            </ARGS>
+                        </PRED>
                     </SEMANTICS>
                 </FRAME>
                 <FRAME>
                     <DESCRIPTION descriptionNumber="8.1" primary="NP V NP PP.goal" secondary="NP-PP; on-PP" xtag="0.2"/>
                     <EXAMPLES>
-                        <EXAMPLE>I spent the time on worries.</EXAMPLE>
+                        <EXAMPLE>I spent the resources on this trip.</EXAMPLE>
                     </EXAMPLES>
                     <SYNTAX>
                         <NP value="Agent">
@@ -199,6 +282,34 @@
                                 <ARG type="ThemRole" value="Goal"/>
                             </ARGS>
                         </PRED>
+                        <PRED value="do">
+                            <ARGS>
+                                <ARG type="ThemRole" value="Agent"/>
+                                <ARG type="Event" value="E"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="start(E)"/>
+                                <ARG type="ThemRole" value="Source"/>
+                                <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="path_rel">
+                            <ARGS>
+                                <ARG type="Event" value="result(E)"/>
+                                <ARG type="ThemRole" value="Goal"/>
+                                <ARG type="ThemRole" value="Asset"/>
+                                <ARG type="Constant" value="ch_of_poss"/>
+                            </ARGS>
+                        </PRED>
+                        <PRED value="equals">
+                            <ARGS>
+                                <ARG type="ThemRole" value="Agent"/>
+                                <ARG type="ThemRole" value="Source"/>
+                            </ARGS>
+                        </PRED>
                     </SEMANTICS>
                 </FRAME>
             </FRAMES>
@@ -206,6 +317,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-
-
-

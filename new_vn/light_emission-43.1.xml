@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="light_emission-43.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="light_emission-43.1" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="beam" wn="beam%2:43:03" grouping="beam.02"/>
         <MEMBER name="blaze" wn="" grouping=""/>
@@ -55,7 +54,7 @@
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>
@@ -84,13 +83,13 @@
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                         <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
@@ -118,13 +117,13 @@
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                     </ARGS>
                 </PRED>
                 <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                         <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
@@ -155,13 +154,13 @@
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                         <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
@@ -192,13 +191,13 @@
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="location">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                         <ARG type="ThemRole" value="Location"/>
                     </ARGS>
                 </PRED>
@@ -223,7 +222,7 @@
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="VerbSpecific" value="Light"/>
                     </ARGS>
                 </PRED>
                 <PRED value="cause">
@@ -232,6 +231,8 @@
                         <ARG type="Event" value="E"/>
                     </ARGS>
                 </PRED>
+
+
             </SEMANTICS>
             <!--some verbs-->
         </FRAME>

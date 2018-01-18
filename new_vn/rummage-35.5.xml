@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="rummage-35.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="rummage-35.5" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="bore" wn="bore%2:35:00" grouping=""/>
         <MEMBER name="burrow" wn="burrow%2:38:00" grouping=""/>
         <MEMBER name="fumble" wn="fumble%2:35:00" grouping="fumble.01"/>
+        <MEMBER name="go" wn="" grouping="go.12"/>
         <MEMBER name="leaf" wn="leaf%2:39:10" grouping="leaf.01"/>
         <MEMBER name="listen" wn="listen%2:39:01 listen%2:41:11" grouping="listen.01"/>
         <MEMBER name="look" wn="look%2:39:02" grouping="look.01"/>
@@ -58,7 +58,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="" primary="NP V PP.location PP.theme" secondary="PP-PP; Location-PP Theme-PP" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>He rummaged through the door for the ball.</EXAMPLE>
+                <EXAMPLE>He rummaged through the drawer for the ball.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">

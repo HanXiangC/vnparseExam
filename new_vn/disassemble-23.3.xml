@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="disassemble-23.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="disassemble-23.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="carve" wn="carve%2:35:01 carve%2:35:02" grouping="carve.01"/>
         <MEMBER name="detach" wn="detach%2:35:01" grouping="detach.01"/>
@@ -86,7 +85,6 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="?Co-Patient"/>
                     </ARGS>
@@ -94,7 +92,6 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="?Co-Patient"/>
                     </ARGS>
@@ -131,7 +128,6 @@
                 <PRED value="together">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
@@ -139,7 +135,6 @@
                 <PRED value="apart">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="Constant" value="physical"/>
                         <ARG type="ThemRole" value="Patient"/>
                         <ARG type="ThemRole" value="Co-Patient"/>
                     </ARGS>
@@ -149,7 +144,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="1.1.1" primary="NP V ADV-Middle" secondary="Middle Construction" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>That new handle unscrews easily.</EXAMPLE>
+                <EXAMPLE>That new handle unscrewed easily.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Patient">
@@ -161,15 +156,18 @@
                 <ADV/>
             </SYNTAX>
             <SEMANTICS>
-                <PRED value="property">
+                <PRED value="together">
                     <ARGS>
+                        <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Patient"/>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="ThemRole" value="?Co-Patient"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Adv">
+                <PRED value="apart">
                     <ARGS>
-                        <ARG type="VerbSpecific" value="Prop"/>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="ThemRole" value="?Co-Patient"/>
                     </ARGS>
                 </PRED>
             </SEMANTICS>

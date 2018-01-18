@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="contiguous_location-47.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="contiguous_location-47.8" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--Removed "miss" from the class-->
         <!--Verbs may add more specific description of the spatial relationship between Theme and Co-Theme-->
@@ -13,7 +12,6 @@
         <MEMBER name="cap" wn="cap%2:42:00" grouping="cap.01"/>
         <MEMBER name="circle" wn="" grouping="circle.02"/>
         <MEMBER name="cloak" wn="" grouping="cloak.02"/>
-        <MEMBER name="contain" wn="contain%2:42:13" grouping="contain.01"/>
         <MEMBER name="cover" wn="cover%2:35:01" grouping="cover.01"/>
         <MEMBER name="edge" wn="edge%2:35:00" grouping="edge.03"/>
         <MEMBER name="encircle" wn="encircle%2:35:12" grouping=""/>
@@ -85,18 +83,6 @@
                         <ARG type="ThemRole" value="Co-Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED value="exist">
-                    <ARGS>
-                        <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Theme"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="exist">
-                    <ARGS>
-                        <ARG type="Event" value="during(E)"/>
-                        <ARG type="ThemRole" value="Co-Theme"/>
-                    </ARGS>
-                </PRED>
             </SEMANTICS>
         </FRAME>
     </FRAMES>
@@ -136,18 +122,6 @@
                                 <ARG type="ThemRole" value="Co-Theme"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="exist">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="exist">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Co-Theme"/>
-                            </ARGS>
-                        </PRED>
                     </SEMANTICS>
                 </FRAME>
             </FRAMES>
@@ -175,18 +149,6 @@
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="?Co-Theme"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="exist">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                            </ARGS>
-                        </PRED>
-                        <PRED value="exist">
-                            <ARGS>
-                                <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="?Co-Theme"/>
                             </ARGS>
                         </PRED>

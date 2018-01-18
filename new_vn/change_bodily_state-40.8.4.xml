@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="change_bodily_state-40.8.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="change_bodily_state-40.8.4" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--verb add a manner predicate-->
         <MEMBER name="blanch" wn="blanch%2:29:00" grouping=""/>
@@ -10,7 +9,10 @@
         <MEMBER name="sicken" wn="sicken%2:29:00" grouping="sicken.01"/>
         <MEMBER name="black_out" wn="black_out%2:29:00" grouping=""/>
         <MEMBER name="swoon" wn="swoon%2:29:00" grouping=""/>
+        <MEMBER name="doze" wn="drowse%2:29:00" grouping=""/>
         <MEMBER name="doze_off" wn="doze_off%2:29:00" grouping=""/>
+        <MEMBER name="drowse" wn="drowse%2:29:01" grouping=""/>
+        <MEMBER name="drowse_off" wn="drowse_off%2:29:00" grouping=""/>
         <MEMBER name="drift_off" wn="drift_off%2:29:00" grouping=""/>
         <MEMBER name="konk_out" wn="" grouping=""/>
         <MEMBER name="nod_off" wn="nod_off%2:29:00" grouping=""/>
@@ -40,6 +42,24 @@
                 <VERB/>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="body_reflex">
                     <ARGS>
                         <ARG type="Event" value="E"/>
@@ -73,6 +93,24 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Experiencer"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="body_reflex">
                     <ARGS>
                         <ARG type="Event" value="E"/>
@@ -96,4 +134,3 @@
     </FRAMES>
     <SUBCLASSES/>
 </VNCLASS>
-

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="put_spatial-9.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="put_spatial-9.2" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <!--Perhaps make a subclass put_spatial-9.2-2 (dangle, hang, suspend) that allows Prep[from]-->
     <MEMBERS>
         <!--members specify Pos argument in position predicate-->
@@ -19,6 +18,11 @@
             <SELRESTRS>
                 <SELRESTR Value="+" type="concrete"/>
             </SELRESTRS>
+        </THEMROLE>
+        <THEMROLE type="Initial_Location">
+            <SELRESTRS>
+                <SELRESTR Value="+" type="location"/> 
+            </SELRESTRS>  
         </THEMROLE>
         <THEMROLE type="Destination">
             <SELRESTRS>
@@ -59,18 +63,22 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="Prep">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
+                        <ARG type="ThemRole" value="?Initial_Location"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Destination"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>      
                     </ARGS>
                 </PRED>
                 <PRED value="position">
@@ -115,18 +123,22 @@
                         <ARG type="ThemRole" value="Theme"/>
                     </ARGS>
                 </PRED>
-                <PRED bool="!" value="Prep">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="start(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
                         <ARG type="ThemRole" value="Destination"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>        
                     </ARGS>
                 </PRED>
-                <PRED value="Prep">
+                <PRED value="path_rel">
                     <ARGS>
                         <ARG type="Event" value="end(E)"/>
                         <ARG type="ThemRole" value="Theme"/>
-                        <ARG type="ThemRole" value="Destination"/>
+                        <ARG type="ThemRole" value="?Initial_Location"/>
+                        <ARG type="Constant" value="ch_of_loc"/>
+                        <ARG type="VerbSpecific" value="prep"/>
                     </ARGS>
                 </PRED>
                 <PRED value="position">
@@ -180,13 +192,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="Prep">
-                            <ARGS>
-                                <ARG type="Event" value="E"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="Destination"/>
-                            </ARGS>
-                        </PRED>
                         <PRED value="position">
                             <ARGS>
                                 <ARG type="Event" value="E"/>
@@ -214,13 +219,6 @@
                         </NP>
                     </SYNTAX>
                     <SEMANTICS>
-                        <PRED value="Prep">
-                            <ARGS>
-                                <ARG type="Event" value="E"/>
-                                <ARG type="ThemRole" value="Theme"/>
-                                <ARG type="ThemRole" value="Destination"/>
-                            </ARGS>
-                        </PRED>
                         <PRED value="position">
                             <ARGS>
                                 <ARG type="Event" value="E"/>
@@ -235,4 +233,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-

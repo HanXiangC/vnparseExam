@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="bulge-47.5.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="bulge-47.5.3" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <MEMBER name="bristle" wn="bristle%2:42:00" grouping="bristle.02"/>
         <MEMBER name="bulge" wn="bulge%2:30:00 bulge%2:38:00" grouping="bulge.01"/>
         <MEMBER name="buzz" wn="" grouping=""/>
         <MEMBER name="hum" wn="" grouping=""/>
-        <MEMBER name="hyperventilate" wn="hyperventilate%2:29:00
-        hyperventilate%2:29:01" grouping=""/>
+        <MEMBER name="hyperventilate" wn="hyperventilate%2:29:00         hyperventilate%2:29:01" grouping=""/>
         <MEMBER name="seethe" wn="seethe%2:42:00" grouping="seethe.01"/>
     </MEMBERS>
     <THEMROLES>

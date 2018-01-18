@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="coloring-24" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="coloring-24" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
         <!--Material comes from the verb-->
         <MEMBER name="color" wn="color%2:30:00 color%2:36:01" grouping="color.01"/>
@@ -38,7 +37,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="0.2" primary="NP V NP" secondary="Basic Transitive" xtag="0.2"/>
             <EXAMPLES>
-                <EXAMPLE>Claire colors the picture.</EXAMPLE>
+                <EXAMPLE>Claire painted the wall.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -50,6 +49,24 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="?Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
@@ -59,14 +76,14 @@
                 <PRED value="apply_material">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="VerbSpecific" value="Material"/>
+                        <ARG type="VerbSpecific" value="?Material"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
                 <PRED value="covered">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Material"/>
+                        <ARG type="VerbSpecific" value="?Material"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
@@ -75,7 +92,7 @@
         <FRAME>
             <DESCRIPTION descriptionNumber="0.4" primary="NP V NP ADJP" secondary="NP-ADJP; Resultative" xtag=""/>
             <EXAMPLES>
-                <EXAMPLE>Claire colors the picture red.</EXAMPLE>
+                <EXAMPLE>Claire painted the wall red.</EXAMPLE>
             </EXAMPLES>
             <SYNTAX>
                 <NP value="Agent">
@@ -90,6 +107,24 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
@@ -99,20 +134,14 @@
                 <PRED value="apply_material">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="VerbSpecific" value="Material"/>
+                        <ARG type="VerbSpecific" value="?Material"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
                 <PRED value="covered">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Material"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="Pred">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="VerbSpecific" value="?Material"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
@@ -141,6 +170,24 @@
                 </NP>
             </SYNTAX>
             <SEMANTICS>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="start(E)"/>
+                        <ARG type="ThemRole" value="?Initial_State"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
+                <PRED value="path_rel">
+                    <ARGS>
+                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="ThemRole" value="Result"/>
+                        <ARG type="ThemRole" value="Patient"/>
+                        <ARG type="Constant" value="ch_of_state"/>
+                        <ARG type="VerbSpecific" value="prep"/>
+                    </ARGS>
+                </PRED>
                 <PRED value="cause">
                     <ARGS>
                         <ARG type="ThemRole" value="Agent"/>
@@ -150,20 +197,14 @@
                 <PRED value="apply_material">
                     <ARGS>
                         <ARG type="Event" value="during(E)"/>
-                        <ARG type="VerbSpecific" value="Material"/>
+                        <ARG type="VerbSpecific" value="?Material"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>
                 <PRED value="covered">
                     <ARGS>
                         <ARG type="Event" value="result(E)"/>
-                        <ARG type="VerbSpecific" value="Material"/>
-                        <ARG type="ThemRole" value="Patient"/>
-                    </ARGS>
-                </PRED>
-                <PRED value="Pred">
-                    <ARGS>
-                        <ARG type="Event" value="result(E)"/>
+                        <ARG type="VerbSpecific" value="?Material"/>
                         <ARG type="ThemRole" value="Patient"/>
                     </ARGS>
                 </PRED>

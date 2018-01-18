@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE VNCLASS SYSTEM "vn_class-3.dtd">
-<VNCLASS ID="establish-55.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
+<VNCLASS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="establish-55.5" xsi:noNamespaceSchemaLocation="vn_schema-3.xsd">
     <MEMBERS>
+        <MEMBER name="bring" wn="" grouping="bring.02"/>
         <MEMBER name="constitute" wn="constitute%2:36:00" grouping="constitute.02"/>
         <MEMBER name="constitutionalize" wn="constitutionalize%2:40:00" grouping="constitutionalize.01"/>
         <MEMBER name="innovate" wn="innovate%2:36:00" grouping=""/>
@@ -73,6 +73,7 @@
                 <MEMBER name="bring_about" wn="" grouping=""/>
                 <MEMBER name="arrange" wn="arrange%2:36:03" grouping="arrange.02"/>
                 <MEMBER name="introduce" wn="" grouping=""/>
+                <MEMBER name="set" wn="" grouping="set.03"/>
                 <MEMBER name="simulate" wn="" grouping=""/>
                 <MEMBER name="strike_up" wn="strike_up%2:36:00" grouping=""/>
                 <MEMBER name="synthesise" wn="" grouping=""/>
@@ -113,7 +114,7 @@
                                 <ARG type="ThemRole" value="Theme"/>
                             </ARGS>
                         </PRED>
-                        <PRED value="use">
+                        <PRED value="utilize">
                             <ARGS>
                                 <ARG type="Event" value="during(E)"/>
                                 <ARG type="ThemRole" value="Agent"/>
@@ -133,6 +134,3 @@
         </VNSUBCLASS>
     </SUBCLASSES>
 </VNCLASS>
-
-
-
